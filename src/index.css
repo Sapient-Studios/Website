@@ -1,13 +1,132 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+	font-family: "Satoshi";
+	src: url("./assets/font/Satoshi-Black.otf") format("opentype");
+	font-weight: 900; /* Black */
+	font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+	font-family: "Satoshi";
+	src: url("./assets/font/Satoshi-BlackItalic.otf") format("opentype");
+	font-weight: 900; /* Black */
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Satoshi";
+	src: url("./assets/font/Satoshi-Bold.otf") format("opentype");
+	font-weight: 700; /* Bold */
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Satoshi";
+	src: url("./assets/font/Satoshi-BoldItalic.otf") format("opentype");
+	font-weight: 700; /* Bold */
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Satoshi";
+	src: url("./assets/font/Satoshi-Italic.otf") format("opentype");
+	font-weight: 400; /* Regular */
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Satoshi";
+	src: url("./assets/font/Satoshi-Light.otf") format("opentype");
+	font-weight: 300; /* Light */
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Satoshi";
+	src: url("./assets/font/Satoshi-LightItalic.otf") format("opentype");
+	font-weight: 300; /* Light */
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Satoshi";
+	src: url("./assets/font/Satoshi-Medium.otf") format("opentype");
+	font-weight: 500; /* Medium */
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Satoshi";
+	src: url("./assets/font/Satoshi-MediumItalic.otf") format("opentype");
+	font-weight: 500; /* Medium */
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Satoshi";
+	src: url("./assets/font/Satoshi-Regular.otf") format("opentype");
+	font-weight: 400; /* Regular */
+	font-style: normal;
+}
+
+* {
+	--bg-color: #171716;
+	--white: #f4efef;
+	--white-40: #f4efef66;
+	--grey: #d9d9d9;
+	--blue-main: #1bf4f9;
+
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Satoshi";
+	scroll-behavior: smooth;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+	margin-block-start: 0;
+	margin-block-end: 0;
+
+	/* font-family: Satoshi; */
+	font-size: 4rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+h2 {
+	margin-block-start: 0;
+	margin-block-end: 0;
+
+	/* font-family: Satoshi; */
+	font-size: 3rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+h3 {
+	margin-block-start: 0;
+	margin-block-end: 0;
+
+	/* font-family: Satoshi; */
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+h4 {
+	margin-block-start: 0;
+	margin-block-end: 0;
+
+	/* font-family: Satoshi; */
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
 }
