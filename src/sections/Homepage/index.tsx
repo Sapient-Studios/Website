@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import "./style.css";
-import ButtonMain from "src/components/ButtonMain";
+import ButtonHero from "src/components/ButtonHero";
 import Logo from "src/components/LogoMain";
 import CurvedLines from 'src/components/CurvedLines';
 
@@ -89,7 +89,7 @@ function HomePage() {
 					Making your <span className="home-gradient-text" style={gradientStyle1}>business</span> <br />
 					<span className="home-gradient-text2" style={gradientStyle2}>efficient</span> with AI
 				</h1>
-				<ButtonMain text="Get in touch" width="18vw" height="7vh" />
+				<ButtonHero width="12rem" height="4rem" />
 			</main>
 		</section>
 	);

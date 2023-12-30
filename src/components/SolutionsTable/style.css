@@ -1,0 +1,39 @@
+.collapsible-sections {
+    width: 50vw;
+}
+
+.section {
+    /* border: 1px solid black; */
+    margin-bottom: 8px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.section.open {
+    max-height: 20rem;
+    /* Set a suitable max-height for your content */
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.section-content {
+    padding: 8px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    transition: transform 0.3s ease;
+}
+
+.icon.close {
+    transform: rotate(45deg);
+}

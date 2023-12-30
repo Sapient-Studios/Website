@@ -1,18 +1,19 @@
-.solutions-section {
+.approach-section {
 	background-color: var(--bg-color);
 	color: var(--white);
 	height: fit-content;
 	font-size: calc(10px + 2vmin);
 	min-height: 100vh;
-	padding-bottom: 4rem;
+
+	padding: 4rem 0;
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 4rem;
+	gap: 3rem;
 }
 
-.solutions-main {
+.approach-main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -23,10 +24,6 @@
 	height: fit-content;
 }
 
-.solutions-content-wrapper{
-	gap: 3rem;
-
-}
 
 
 /* create the key media queries */

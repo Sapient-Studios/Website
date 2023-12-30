@@ -4,6 +4,7 @@ import CurvedLinesWithGradient from './components/CurvedLines';
 import Navbar from './components/Navbar';
 import HomePage from './sections/Homepage';
 import SolutionsPage from './sections/SolutionsPage';
+import ApproachPage from './sections/ApproachPage';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <HomePage />
       <Navbar onHeightChange={setNavbarHeight} />
       <SolutionsPage navbarHeight={navbarHeight} />
+      <ApproachPage />
     </div>
   );
 }

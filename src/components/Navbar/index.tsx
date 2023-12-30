@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
-import IconMain from '../IconMain';
 import './styles.css';
+import IconMain from '../IconMain';
+import ButtonNav from '../ButtonNav';
 
 function Navbar({ onHeightChange }: { onHeightChange: (height: number) => void }) {
 	const navbarRef = useRef<HTMLElement | null>(null);
@@ -19,6 +20,7 @@ function Navbar({ onHeightChange }: { onHeightChange: (height: number) => void }
 			<div className='navbar-links'>
 				<a>Solutions</a>
 			</div>
+			<ButtonNav />
 		</nav>
 	);
 }
