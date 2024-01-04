@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style.css"; // Import your CSS file for styling
-import PlusIcon from "../PlusIcon"; // Import the common icon
+import PlusIcon from "../../assets/images/PlusIcon"; // Import the common icon
 
 interface SectionProps {
     id: string;

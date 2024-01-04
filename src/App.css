@@ -1,4 +1,58 @@
+/* .App {
+	margin: 0;
+	padding: 0;
+}
+
+.cursor {
+	position: fixed;
+	transform: translateX(-50%) translateY(-50%);
+	pointer-events: none;
+	z-index: 10000;
+	width: 4rem;
+	height: 4rem;
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
+	cursor: none;
+	background: url('./assets/images/HeroCursor.svg') center/contain no-repeat;
+	z-index: 100;
+}
+
+.cursor.visible {
+	cursor: none;
+	opacity: 1;
+} */
+
 .App {
 	margin: 0;
 	padding: 0;
+}
+
+
+.cursor {
+	position: fixed;
+	pointer-events: none;
+	z-index: 10000;
+	width: 5rem;
+	height: 5rem;
+	background: url('./assets/images/HeroCursor.svg') center/cover no-repeat;
+	/* Replace with your SVG path */
+	transform-origin: center center;
+	animation: rotate 10s linear infinite;
+	/* Adjust the rotation speed (2s in this case) */
+	opacity: 0;
+	transition: opacity 0.2s ease-out;
+}
+
+@keyframes rotate {
+	from {
+		transform:  translateX(-50%) translateY(-50%) rotate(0deg);
+	}
+
+	to {
+		transform: translateX(-50%) translateY(-50%) rotate(360deg) ;
+	}
+}
+
+.cursor.visible {
+	opacity: 1;
 }

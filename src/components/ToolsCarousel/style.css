@@ -1,52 +1,59 @@
-.slider {
-    background: transparent;
-
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    
-    height: 100px;
-    width: 100%;
-    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 15%, rgb(0, 0, 0) 85%, rgba(0, 0, 0, 0) 100%);
-}
-
-.slider .slide-track{
-    background-color: transparent;
-    animation: scroll 20s linear infinite;
-    display: flex;
-    width: 100%;
-    gap: 1rem;
-}
-
-.slider .slide {
-    height: 100px;
-    width: 250px;
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
+/* Looper styles */
+@keyframes slideAnim {
+    from {
+        transform: translateX(0%);
     }
 
-    100% {
+    to {
         transform: translateX(-100%);
     }
 }
 
-
-
-
-/* .slider {
-    display: flex;
+.looper {
     width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    place-items: center;
-    margin: 0px;
-    padding: 10px;
-    list-style-type: none;
-    opacity: 1;
-    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 10%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
     overflow: hidden;
+}
+
+.looper__innerList {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+}
+
+.looper__innerList[data-animate="true"] .looper__listInstance {
+    animation: slideAnim linear infinite;
+}
+
+.looper__listInstance {
+    display: flex;
+    width: max-content;
+
+    animation: none;
+}
+
+.contentBlock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.contentBlock--one {
+    width: 120px;
+    background: rgba(255, 255, 255, 0.05);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.contentBlock--one:last-of-type {
+    margin-right: 36px;
+}
+/* 
+.contentBlock--two {
+    color: var(--green);
+    font-size: 48px;
+    background: rgba(255, 255, 255, 0.05);
 } */

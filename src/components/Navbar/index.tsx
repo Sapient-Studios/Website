@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import './styles.css';
-import IconMain from '../IconMain';
+import IconMain from '../../assets/images/IconMain';
 import ButtonNav from '../ButtonNav';
 
 function Navbar({ onHeightChange }: { onHeightChange: (height: number) => void }) {

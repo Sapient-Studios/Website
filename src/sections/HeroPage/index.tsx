@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import "./style.css";
 import ButtonHero from "src/components/ButtonHero";
-import Logo from "src/components/LogoMain";
+import Logo from "src/assets/images/LogoMain";
 import CurvedLines from 'src/components/CurvedLines';
 
-function HomePage() {
+function HeroPage() {
 	const [gradientStyle1, setGradientStyle1] = useState({});
 	const [gradientStyle2, setGradientStyle2] = useState({});
 
@@ -12,16 +12,16 @@ function HomePage() {
 		const { clientX, clientY } = event;
 		// the center of the screen is a sphere. get me the angle between the center and the mouse
 
-		// get the coordinates of home-gradient-text class
-		const gradientText = document.querySelector('.home-gradient-text');
-		const gradientText2 = document.querySelector('.home-gradient-text2');
+		// get the coordinates of hero-gradient-text class
+		const gradientText = document.querySelector('.hero-gradient-text');
+		const gradientText2 = document.querySelector('.hero-gradient-text2');
 		const gradientTextRect = gradientText?.getBoundingClientRect();
 		const gradientText2Rect = gradientText2?.getBoundingClientRect();
 		if (!gradientTextRect || !gradientText2Rect) {
 			return;
 		}
 
-		// get the center of the home-gradient-text class
+		// get the center of the hero-gradient-text class
 		const center1X = gradientTextRect?.left + gradientTextRect?.width / 2;
 		const center1Y = gradientTextRect?.top + gradientTextRect?.height / 2;
 
@@ -80,14 +80,14 @@ function HomePage() {
 	}, []);
 
 	return (
-		<section className='home-section' onMouseMove={handleMouseMove}>
-			<header className="home-header">
+		<section className='hero-section' onMouseMove={handleMouseMove}>
+			<header className="hero-header">
 				<Logo />
 			</header>
-			<main className="home-main">
-				<h1 className="home-title">
-					Making your <span className="home-gradient-text" style={gradientStyle1}>business</span> <br />
-					<span className="home-gradient-text2" style={gradientStyle2}>efficient</span> with AI
+			<main className="hero-main">
+				<h1 className="hero-title">
+					Making your <span className="hero-gradient-text" style={gradientStyle1}>business</span> <br />
+					<span className="hero-gradient-text2" style={gradientStyle2}>efficient</span> with AI
 				</h1>
 				<ButtonHero width="12rem" height="4rem" />
 			</main>
@@ -95,4 +95,4 @@ function HomePage() {
 	);
 }
 
-export default HomePage;
+export default HeroPage;

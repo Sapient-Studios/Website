@@ -24,8 +24,16 @@ function SolutionsPage({ navbarHeight }: { navbarHeight: number }) {
 				{/* p5? */}
 
 			</main>
-
-			<ToolsCarousel />
+			<ToolsCarousel speed={3} direction="right">
+				<div className="contentBlock contentBlock--one">
+					Google
+				</div>
+			</ToolsCarousel>
+			<ToolsCarousel direction="right" speed={0.4}>
+				<div className="contentBlock contentBlock--two">
+					<i>faster 🚀</i>
+				</div>
+			</ToolsCarousel>
 
 		</section>
 	);

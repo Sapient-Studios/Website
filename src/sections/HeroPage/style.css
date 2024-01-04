@@ -1,11 +1,11 @@
-.home-section {
+.hero-section {
 	background-color: var(--bg-color);
 	color: var(--white);
 	height: 100vh;
 	font-size: calc(10px + 2vmin);
 }
 
-.home-header {
+.hero-header {
 	position: absolute; /* do not remove fixed. relative content should not account with this div's height */
 	width: 100%;
 	display: flex;
@@ -15,7 +15,7 @@
 	padding-top: 2vh;
 }
 
-.home-main {
+.hero-main {
 	/* position: relative; */
 	display: flex;
 	flex-direction: column;
@@ -26,7 +26,7 @@
 	height: 100vh;
 }
 
-.home-title {
+.hero-title {
 	position: relative;
 	color: var(--Palette-White, #f4efef);
 	font-family: Satoshi;
@@ -37,7 +37,7 @@
 	margin-bottom: 3vh;
 }
 
-.home-gradient-text {
+.hero-gradient-text {
 	transition: all 0.5s ease-in-out;
 	background: linear-gradient(108deg, #1bf4f9, #002cdcb4);
 	background-position: center !important;
@@ -48,7 +48,7 @@
 	text-shadow: 0 0 5px rgba(10, 105, 230, 0.55);
 }
 
-.home-gradient-text2 {
+.hero-gradient-text2 {
 	transition: all 0.5s ease-in-out;
 	background: linear-gradient(196deg, #1bf4f9, #0a69e6aa);
 	background-position: center !important;

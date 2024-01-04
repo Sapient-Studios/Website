@@ -1,5 +1,5 @@
 import './styles.css'
-import Arrow from '../Arrow'
+import Arrow from '../../assets/images/Arrow'
 
 function ButtonHero({ width, height }: {width?: string, height?: string }) {
 	// &rarr; doesnt work.
