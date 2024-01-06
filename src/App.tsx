@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 import HeroPage from './sections/HeroPage';
 import SolutionsPage from './sections/SolutionsPage';
 import ApproachPage from './sections/ApproachPage';
+import ContactPage from './sections/ContactPage';
+import Footer from './components/Footer';
 
 function App() {
   const [navbarHeight, setNavbarHeight] = useState(0);
@@ -52,6 +54,8 @@ function App() {
       <Navbar onHeightChange={setNavbarHeight} />
       <SolutionsPage navbarHeight={navbarHeight} />
       <ApproachPage />
+      <ContactPage navbarHeight={navbarHeight} />
+      <Footer />
     </div>
   );
 }

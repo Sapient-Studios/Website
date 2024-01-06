@@ -1,0 +1,35 @@
+.contact-section {
+    height: 100vh;
+    position: relative;
+    /* Add position relative to the container */
+    background-color: var(--bg-color);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.contact-background {
+    width: 100%;
+    height: fit-content;
+    object-fit: contain;
+    /* Make sure the image is contained */
+}
+
+.contact-form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
