@@ -15,13 +15,21 @@
 	cursor: pointer;
 }
 
+.looper__innerList {
+	gap: 1vw;
+}
+
+.get-in-touch {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	font-size: 1.25rem;
+}
+
 .main-btn-text {
-	gap: 1rem;
 	width: 100%;
 	overflow: hidden;
 	display: flex;
 	white-space: nowrap;
-	animation: animate_text 3s linear infinite; /* The animation property */
 }
 
 .main-btn:hover {
@@ -32,13 +40,4 @@
 .main-btn svg {
 	width: 100%;
 	height: 100%;
-}
-
-@keyframes animate_text {
-	from {
-		transform: translateX(0%);
-	}
-	to {
-		transform: translateX(100%);
-	}
 }

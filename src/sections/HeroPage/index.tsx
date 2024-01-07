@@ -69,7 +69,6 @@ function HeroPage() {
 
 		window.addEventListener('mousemove', handleMouseMove);
 		window.addEventListener('touchmove', handleMouseMove)
-
 		window.addEventListener('resize', handleMouseMove);
 
 		return () => {

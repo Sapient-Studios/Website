@@ -12,9 +12,6 @@
 .curved-lines-container {
 	width: auto;
 	height: 100vh;
-	justify-content: center;
-	align-items: center;
-	display: flex;
 	position: absolute;
 	overflow: hidden;
 	right: 0%;
