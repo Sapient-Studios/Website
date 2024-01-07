@@ -2,7 +2,7 @@ import React from "react";
 
 function logo() {
 	return (
-		<svg width="238" height="51" viewBox="0 0 238 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<svg width="238" height="51" viewBox="0 0 238 51" fill="none" xmlns="http://www.w3.org/2000/svg" className="hoverable">
 			<g opacity="0.8">
 				<path
 					fillRule="evenodd"

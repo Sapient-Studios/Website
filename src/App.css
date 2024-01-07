@@ -2,44 +2,11 @@
 	margin: 0;
 	padding: 0;
 	cursor: none;
+	overflow: hidden;
 }
 
-.cursor {
-	position: fixed;
-	pointer-events: none;
-	z-index: 1000;
-
-	background-color: var(--white);
-	height: 1rem;
-	width: 1rem;
-	border-radius: 50%;
-	-moz-border-radius: 50%;
-	-webkit-border-radius: 50%;
-	transition: transform 0.1s ease-out;
-	transform: translateX(-50%) translateY(-50%);
-	/* opacity: 0; */
-}
-
-@keyframes rotate {
-	from {
-		transform: translateX(-50%) translateY(-50%) 0.1s rotate(0deg);
-	}
-
-	to {
-		transform: translateX(-50%) translateY(-50%) 0.1s rotate(360deg);
-	}
-}
-
-.cursor.visible {
-	height: 5rem;
-	width: 5rem;
-	background: url('./assets/images/HeroCursor.svg') center/cover no-repeat;
-	transform-origin: center center;
-	animation: rotate 10s linear infinite;
-	/* Adjust the rotation speed (2s in this case) */
-	transition: opacity 0.1s ease-out;
-	opacity: 1;
-	transition-property: animation;
+.mouse-cursor-wrapper {
+	opacity: 1 !important;
 }
 
 .curved-lines-container {
@@ -52,6 +19,4 @@
 	overflow: hidden;
 	right: 0%;
 	top: 0%;
-	/* transform: rotate(45deg); */
-	/* 45 degrees tilt */
 }

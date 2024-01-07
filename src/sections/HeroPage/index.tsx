@@ -81,14 +81,15 @@ function HeroPage() {
 
 	return (
 		<section className='hero-section' onMouseMove={handleMouseMove}>
-			<header className="hero-header">
+			<div className="hero-header">
 				<Logo />
-			</header>
+			</div>
 			<main className="hero-main">
 				<h1 className="hero-title">
 					Making your <span className="hero-gradient-text" style={gradientStyle1}>business</span> <br />
 					<span className="hero-gradient-text2" style={gradientStyle2}>efficient</span> with AI
 				</h1>
+
 				<ButtonHero width="12rem" height="4rem" />
 			</main>
 		</section>

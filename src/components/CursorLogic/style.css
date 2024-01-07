@@ -1,0 +1,45 @@
+.cursor {
+	display: none;
+	overflow: hidden;
+}
+
+a {
+	cursor: none;
+	text-decoration: none;
+}
+
+button {
+	cursor: none;
+	text-decoration: none;
+	pointer-events: none;
+}
+
+.cursor-text .char {
+	position: absolute !important;
+	z-index: 10000;
+	color: #f7f8fa;
+}
+
+@media (min-width: 768px) {
+	html,
+	body {
+		cursor: none;
+	}
+
+	.cursor {
+		pointer-events: none;
+		text-transform: uppercase;
+	}
+
+	.cursor .cursor__ball {
+		left: 0;
+		mix-blend-mode: difference;
+		position: fixed;
+		top: 0;
+		z-index: 1000;
+	}
+
+	.cursor .cursor__ball circle {
+		fill: #f7f8fa;
+	}
+}
