@@ -8,6 +8,7 @@ const rotationSpeed = 0.8; // Adjust this value to control speed (larger number 
 
 const CustomCursor = () => {
 	const [widthMatches, setWidthMatches] = useState(false);
+	const [rotate, setRotate] = useState(true);
 	const cursorRef = useRef(null);
 	const cursorPos = useRef({ x: 0, y: 0 });
 	let rotation = 0;
@@ -32,42 +33,60 @@ const CustomCursor = () => {
 
 		// Function to rotate the text
 		const rotateText = () => {
-			rotation += rotationSpeed; // Increment rotation
-			cursorText.forEach((char, index) => {
-				const angle = ((360 / cursorText.length) * index) + rotation;
-				const charX = cursorPos.current.x - 3 + radius * Math.cos(angle * Math.PI / 180);
-				const charY = cursorPos.current.y - 14 + radius * Math.sin(angle * Math.PI / 180);
-				const charAngle = angle + 90;
+			if (rotate) {
+				rotation += rotationSpeed; // Increment rotation
+				cursorText.forEach((char, index) => {
+					const angle = ((360 / cursorText.length) * index) + rotation;
+					const charX = cursorPos.current.x - 3 + radius * Math.cos(angle * Math.PI / 180);
+					const charY = cursorPos.current.y - 14 + radius * Math.sin(angle * Math.PI / 180);
+					const charAngle = angle + 90;
 
-				gsap.set(char, {
-					x: charX,
-					y: charY,
-					rotation: charAngle,
-					transformOrigin: 'center'
+					gsap.to(char, {
+						x: charX + window.scrollX,
+						y: charY + window.scrollY,
+						rotation: charAngle,
+						transformOrigin: 'center',
+						duration: 0.12, // Duration of the transition
+						ease: "sine.inOut",
+					});
 				});
-			});
-			requestAnimationFrame(rotateText);
+				requestAnimationFrame(rotateText);
+			}
+		};
+
+		const checkScroll = () => {
+			setRotate(window.scrollY > window.innerHeight / 2);
+			console.log(rotate)
 		};
 
 		const onMouseMove = (e) => {
+			let xCoord = e.clientX;
+			let yCoord = e.clientY;
+
+			if (!xCoord || !yCoord) {
+				return;
+			};
+
+
 			if (widthMatches) {
 				// Update cursor position
-				cursorPos.current.x = e.clientX;
-				cursorPos.current.y = e.clientY;
+				cursorPos.current.x = xCoord;
+				cursorPos.current.y = yCoord;
 
 				gsap.to(bigBall, {
-					x: e.clientX - 16,
-					y: e.clientY - 18,
+					x: xCoord - 16,
+					y: yCoord - 18,
 					duration: 0.4,
 					ease: "ease-in-out",
 				});
 
 				gsap.to(smallBall, {
-					x: e.clientX - 1,
-					y: e.clientY - 13,
+					x: xCoord - 1,
+					y: yCoord - 13,
 					duration: 0.1,
 				});
 			}
+
 		};
 
 		const onMouseHover = () => {
@@ -84,9 +103,9 @@ const CustomCursor = () => {
 			});
 		};
 
-		rotateText(); // Start rotating text
+		rotateText();
 		body.addEventListener('mousemove', onMouseMove);
-		body.addEventListener('scroll', onMouseMove)
+		document.addEventListener('scroll', checkScroll)
 		document.querySelectorAll('.hoverable').forEach((element) => {
 			element.addEventListener('mouseenter', onMouseHover);
 			element.addEventListener('mouseleave', onMouseHoverOut);
@@ -95,14 +114,14 @@ const CustomCursor = () => {
 		return () => {
 			x.removeListener(togglePageCursor);
 			body.removeEventListener('mousemove', onMouseMove);
-			body.removeEventListener('scroll', onMouseMove)
+			document.removeEventListener('scroll', checkScroll)
 			document.querySelectorAll('.hoverable').forEach((element) => {
 				element.removeEventListener('mouseenter', onMouseHover);
 				element.removeEventListener('mouseleave', onMouseHoverOut);
 			});
 			cancelAnimationFrame(rotateText);
 		};
-	}, [widthMatches]);
+	}, [widthMatches, rotate]);
 
 	return (
 		<div className="cursor" ref={cursorRef} style={{ display: widthMatches ? 'block' : 'none' }}>
