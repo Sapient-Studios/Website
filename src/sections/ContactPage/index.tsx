@@ -5,37 +5,36 @@ import ContactBackground from "../../assets/images/ContactBackground.svg";
 
 function ContactPage({ navbarHeight }: { navbarHeight: number }) {
 
-    const offset = navbarHeight;
+    const offset = navbarHeight + 16 * 2; // to offset the navbar + 2rem padding
 
     return (
-        <section className="contact-section" style={{ paddingTop: `${offset}px`}}>
-            <div className="background-container">
-                <img className="contact-background" src={ContactBackground} alt="Background" />
-            </div>
+        <section className="contact-section" style={{ paddingTop: `${offset}px` }}>
             <header className="contact-header">
-                <h1>Have any questions?</h1>
+                <h2>Have any questions?</h2>
                 <div>Contact our team today. We're here to help you thrive.</div>
             </header>
-            <div className="contact-form-container">
-                <form  >
-                    <div>
+            <div className="contact-form-container" style={{ backgroundImage: `${ContactBackground} center/cover no-repeat` }}>
+                <form className="contact-form-card">
+                    <div className="contact-form-prop">
                         <label htmlFor="name">Name</label>
-                        <input type="text" id="name" name="Type your name" />
+                        <input type="text" id="name" placeholder="Type your name" />
                     </div>
-                    <div>
+                    <div className="contact-form-prop">
                         <label htmlFor="email">Email</label>
-                        <input type="text" id="email" name="Type your e-mail" />
+                        <input type="text" id="email" placeholder="Type your e-mail" />
                     </div>
-                    <div>
-                        <label htmlFor="message">Subject</label>
-                        <textarea id="message" name="Type the subject" />
+                    <div className="contact-form-prop">
+                        <label htmlFor="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="Type the subject" />
                     </div>
-                    <div>
-                        <button type="submit">Submit</button>
+                    <div className="contact-form-prop">
+                        <label htmlFor="message">How can we help you?</label>
+                        <textarea id="message" placeholder="Write something" rows={4} cols={40}/>
                     </div>
+                    <button type="submit" id="submit-button">Submit</button>
                 </form>
             </div>
-        </section>
+        </section> 
     );
 }
 

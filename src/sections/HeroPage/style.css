@@ -45,7 +45,7 @@
 	-webkit-background-clip: text !important;
 	color: #171716;
 	-webkit-text-stroke: 2px transparent;
-	text-shadow: 0 0 5px rgba(10, 105, 230, 0.55);
+	/* text-shadow: 0 0 5px rgba(10, 105, 230, 0.55); */
 }
 
 .hero-gradient-text2 {
@@ -56,21 +56,7 @@
 	-webkit-background-clip: text !important;
 	color: #171716;
 	-webkit-text-stroke: 2px transparent;
-	text-shadow: 0 0 5px rgba(10, 105, 230, 0.55);
-}
-
-.curved-lines-container {
-	width: 100%;
-	height: 100vh;
-	justify-content: center;
-	align-items: center;
-	display: flex;
-	position: absolute;
-	overflow: hidden;
-	right: 0%;
-	top: 0%;
-	/* transform: rotate(45deg); */
-	/* 45 degrees tilt */
+	/* text-shadow: 0 0 5px rgba(10, 105, 230, 0.55); */
 }
 
 /* create the key media queries */

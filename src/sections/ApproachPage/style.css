@@ -2,10 +2,8 @@
 	background-color: var(--bg-color);
 	color: var(--white);
 	height: fit-content;
-	font-size: calc(10px + 2vmin);
-	min-height: 100vh;
 
-	padding: 4rem 0;
+	padding: 0 6vw;
 
 	display: flex;
 	flex-direction: column;
@@ -13,33 +11,113 @@
 	gap: 3rem;
 }
 
-.approach-main {
+.approach-content-wrapper {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
-	
-	padding: 0 6vw;
 	width: 100%;
-	
+
 	height: fit-content;
 }
 
 
+#ball {
+	position: sticky;
+	z-index: 100;
+	width: 2rem;
+	height: 2rem;
+	/* margin-top: calc(((2.5rem + 4px) - 2rem) / 2); */
+	/* top: 50%; */
+	/* Stick to the middle of the page */
+	left: auto;
+	/* Reset left property to auto */
+	right: a;
+	/* Move the ball to the right side */
+	flex: 0 0 auto;
+	background-color: var(--blue-main);
+	border-radius: 100%;
+	transition: top 0.3s ease;
+	top: 10%;
+	margin-top: -1rem;
+}
+
+.approach-card-wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+.ball-slider {
+	width: fit-content;
+	height: auto;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.ball-slot {
+	width: 2.5rem;
+	height: 2.5rem;
+	/* flex: 0 1 auto; */
+	background-color: transparent;
+	border-radius: 100%;
+	border: 2px solid var(--white);
+
+}
+
+.ball-line {
+	border-left: 2px solid var(--white);
+	flex: 1 1 auto;
+	transform: rotate(180deg);
+
+}
+
+.approach-cards {
+	flex: 1 1 auto;
+	height: fit-content;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.approach-card {
+	height: auto;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.approach-card-wrapper img {
+	position: absolute;
+	right: 0;
+	width: 10rem;
+	height: 10rem;
+}
 
 /* create the key media queries */
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-}
+@media only screen and (max-width: 600px) {}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
+@media only screen and (min-width: 600px) {}
+
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-}
+@media only screen and (min-width: 768px) {}
+
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-}
+@media only screen and (min-width: 992px) {}
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-}
+@media only screen and (min-width: 1200px) {}

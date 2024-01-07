@@ -14,9 +14,12 @@ function Footer() {
             <div className="footer-container" id="footer-2">
                 <img src={FooterLogo} alt="" />
                 <div className="center-links-container">
-                    <a href="">About</a>
-                    <a href="">Become a Partner</a>
-                    <a href="">FAQs</a>
+                    <a href="https://sapientstudios.notion.site/About-ee63d383adf84df2afa47304d56ffc75?pvs=4">
+                        About</a>
+                    <a href="https://sapientstudios.notion.site/Become-a-Partner-d80cc6f2f3e34e6ca15ffd936e586466?pvs=4">
+                        Become a Partner</a>
+                    <a href="https://sapientstudios.notion.site/FAQs-32499e84072f4892ba4a4d0dd3a53672?pvs=4">
+                        FAQs</a>
                 </div>
             </div>
             <div className="footer-container" id="footer-3">

@@ -1,39 +1,13 @@
-/* .App {
-	margin: 0;
-	padding: 0;
-}
-
-.cursor {
-	position: fixed;
-	transform: translateX(-50%) translateY(-50%);
-	pointer-events: none;
-	z-index: 10000;
-	width: 4rem;
-	height: 4rem;
-	opacity: 0;
-	transition: opacity 0.3s ease-out;
-	cursor: none;
-	background: url('./assets/images/HeroCursor.svg') center/contain no-repeat;
-	z-index: 100;
-}
-
-.cursor.visible {
-	cursor: none;
-	opacity: 1;
-} */
-
 .App {
 	margin: 0;
 	padding: 0;
 	cursor: none;
-	
 }
-
 
 .cursor {
 	position: fixed;
 	pointer-events: none;
-	z-index: 100;
+	z-index: 1000;
 
 	background-color: var(--white);
 	height: 1rem;
@@ -50,7 +24,7 @@
 	from {
 		transform: translateX(-50%) translateY(-50%) 0.1s rotate(0deg);
 	}
-	
+
 	to {
 		transform: translateX(-50%) translateY(-50%) 0.1s rotate(360deg);
 	}
@@ -66,5 +40,18 @@
 	transition: opacity 0.1s ease-out;
 	opacity: 1;
 	transition-property: animation;
-	
+}
+
+.curved-lines-container {
+	width: auto;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	position: absolute;
+	overflow: hidden;
+	right: 0%;
+	top: 0%;
+	/* transform: rotate(45deg); */
+	/* 45 degrees tilt */
 }

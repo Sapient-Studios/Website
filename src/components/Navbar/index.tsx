@@ -18,7 +18,9 @@ function Navbar({ onHeightChange }: { onHeightChange: (height: number) => void }
 				<IconMain />
 			</div>
 			<div className='navbar-links'>
-				<a>Solutions</a>
+				<a href='/#solutions'>Solutions</a>
+				<a href='/#approach'>Approach</a>
+				{/* <a></a> */}
 			</div>
 			<ButtonNav />
 		</nav>

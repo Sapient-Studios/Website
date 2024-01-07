@@ -1,5 +1,5 @@
 .contact-section {
-    height: 100vh;
+    height: 120vh;
     position: relative;
     /* Add position relative to the container */
     background-color: var(--bg-color);
@@ -8,28 +8,129 @@
     flex-direction: column;
 }
 
-.background-container {
-    position: absolute;
-    top: 0;
-    left: 0;
+.contact-header{
+    height: fit-content;
     width: 100%;
-    height: 100vh;
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 6vw;
+    gap: 0.5rem;
+}
+
+.background-container {
+    position: absotule;
+    /* top: 0; */
+    /* left: 0; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-}
-
-.contact-background {
-    width: 100%;
-    height: fit-content;
-    object-fit: contain;
-    /* Make sure the image is contained */
 }
 
 .contact-form-container{
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--bg-color) url('../../assets/images/ContactBackground.svg') no-repeat center center;
     height: 100%;
+
+    background-size: contain; /* or cover, depending on your preference */
+    overflow: hidden;
+}
+
+.contact-form-card{
+    width: fit-content;
+    
+    /* background-color: var(--bg-color); */
+    background-color: rgba(23, 23, 22, 0.05);
+    
+    font-family: "Satoshi";
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    padding:2vw;
+
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--blue-main);
+    border-radius: 10px;
+}
+
+.contact-form-prop{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 40vw;
+
+    gap: 0.5rem;
+}
+
+.contact-form-prop label{
+    font-weight: 500;
+}
+
+.contact-form-prop input, .contact-form-prop textarea{
+    resize: none;
+    white-space: nowrap;
+    overflow: auto;
+    
+    background-color: rgba(23, 23, 22, 0.2);;
+    color: var(--white);
+    
+    outline: none;
+    border-width: 0;
+    border-bottom: 1.5px solid var(--white);
+
+    width: 100%;
+
+    padding-bottom: 7px;
+    
+}
+
+.contact-form-prop input:focus, .contact-form-prop textarea:focus{
+    border-bottom: 1.5px solid var(--blue-main);
+
+}
+
+.contact-form-prop input::placeholder, textarea::placeholder{
+    font-family: "Satoshi";
+    font-weight: 400;
+	font-style: italic;
+    color: var(--white);
+}
+
+.contact-form-prop input:focus::placeholder, .contact-form-prop textarea:focus::placeholder{
+    color: var(--white-40);
+
+}
+
+.contact-form-prop textarea#message{
+    padding: 5px 10px;
+    padding-bottom: 0.5rem;
+    border-radius: 5px;
+    border: 1.5px solid var(--white);
+}
+
+#submit-button{
+    width: 100%;
+    height: 3rem;
+
+    background-color: var(--blue-main);
+    color: var(--bg-color);
+
+    border: none;
+    outline: none;
+    border-radius: 5px;
+
+    font-family: "Satoshi";
+    font-weight: 500;
+    font-size: 1rem;
 }

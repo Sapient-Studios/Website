@@ -7,6 +7,7 @@ import SolutionsPage from './sections/SolutionsPage';
 import ApproachPage from './sections/ApproachPage';
 import ContactPage from './sections/ContactPage';
 import Footer from './components/Footer';
+import HeroCurves from "./assets/images/HeroCurves.svg"; 
 
 function App() {
   const [navbarHeight, setNavbarHeight] = useState(0);
@@ -35,7 +36,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" >
       <div
         className={`cursor ${isCursorInside ? 'visible' : ''}`}
         style={{ left: cursorPosition.left, top: cursorPosition.top }}
@@ -47,7 +48,8 @@ function App() {
         onMouseLeave={handleMouseLeave}
       >
         <div className='curved-lines-container' >
-          <CurvedLinesWithGradient />
+          <img src={HeroCurves} alt="" />
+          {/* <CurvedLinesWithGradient /> */}
         </div>
         <HeroPage />
       </div>

@@ -82,12 +82,12 @@ const Section: React.FC<SectionProps> = ({ id, title, content, isOpen, onToggle 
     return (
         <div className={`section ${isOpen ? "open" : ""}`}>
             <div className="section-header" onClick={onToggle}>
-                <h4>{title}</h4>
+                <h3>{title}</h3>
                 <span className={`icon ${isOpen ? "close" : ""}`} style={{ transform: isOpen ? "rotate(45deg)" : "none" }}>
                     <PlusIcon  />
                 </span>
             </div>
-            {isOpen && <div className="section-content">{content}</div>}
+            {isOpen && <span className="section-content">{content}</span>}
             <hr className="closing-line"/>
         </div>
     );
