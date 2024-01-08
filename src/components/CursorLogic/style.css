@@ -17,8 +17,20 @@ button {
 .cursor-text .char {
 	position: absolute !important;
 	z-index: 10000;
-	color: #f7f8fa;
+	font-size: 0.6rem;
+	font-weight: 600;
+	color: white;
 }
+
+.cursor__ball--small{
+	fill: var(--white);
+
+}
+
+/* .cursor__ball--big{
+	fill: transparent;
+	border-radius: 2px solid var(--white);
+} */
 
 @media (min-width: 768px) {
 	html,
@@ -37,9 +49,5 @@ button {
 		position: fixed;
 		top: 0;
 		z-index: 1000;
-	}
-
-	.cursor .cursor__ball circle {
-		fill: #f7f8fa;
 	}
 }

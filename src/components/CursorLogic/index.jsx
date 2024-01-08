@@ -3,7 +3,7 @@ import gsap from 'gsap';
 
 import './style.css';
 const msg = "Keep Scrolling - Keep Scrolling - ";
-const radius = 70;
+const radius = 40;
 const rotationSpeed = 0.8; // Adjust this value to control speed (larger number = faster rotation)
 
 const CustomCursor = () => {
@@ -93,7 +93,7 @@ const CustomCursor = () => {
 
 		const onMouseHover = () => {
 			gsap.to(bigBall, {
-				scale: 2.25,
+				scale: 2,
 				duration: 0.3,
 			});
 		};
@@ -127,12 +127,12 @@ const CustomCursor = () => {
 	return (
 		<div className="cursor" ref={cursorRef} style={{ display: widthMatches ? 'block' : 'none' }}>
 			<div className="cursor__ball cursor__ball--big">
-				<svg height="40" width="40">
-					<circle cx="20" cy="20" r="20" strokeWidth="0"></circle>
+				<svg height="44" width="44">
+					<circle cx="22" cy="22" r="20" stroke="white" strokeWidth="1"></circle>
 				</svg>
 			</div>
 			<div className="cursor__ball cursor__ball--small">
-				<svg height="10" width="10">
+				<svg height="10" width="10"> 
 					<circle cx="5" cy="5" r="5" strokeWidth="0"></circle>
 				</svg>
 			</div>
