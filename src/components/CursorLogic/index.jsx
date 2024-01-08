@@ -9,6 +9,7 @@ const rotationSpeed = 0.8; // Adjust this value to control speed (larger number 
 const CustomCursor = () => {
 	const [widthMatches, setWidthMatches] = useState(false);
 	const [rotate, setRotate] = useState(true);
+	const [cursorInitialized, setCursorInitialized] = useState(false);
 	const cursorRef = useRef(null);
 	const cursorPos = useRef({ x: 0, y: 0 });
 	let rotation = 0;
@@ -33,7 +34,7 @@ const CustomCursor = () => {
 
 		// Function to rotate the text
 		const rotateText = () => {
-			if (rotate) {
+			if (rotate && !cursorInitialized) {
 				rotation += rotationSpeed; // Increment rotation
 				cursorText.forEach((char, index) => {
 					const angle = ((360 / cursorText.length) * index) + rotation;
@@ -51,14 +52,15 @@ const CustomCursor = () => {
 					});
 				});
 				requestAnimationFrame(rotateText);
+				setCursorInitialized(true);
 			}
 		};
 
 		const checkScroll = () => {
-			setRotate(window.scrollY > window.innerHeight / 2);
-			console.log(rotate)
+			if (window.scrollY > window.innerHeight * 0.5) {
+				setRotate(false);
+			}
 		};
-
 		const onMouseMove = (e) => {
 			let xCoord = e.clientX;
 			let yCoord = e.clientY;
@@ -102,7 +104,6 @@ const CustomCursor = () => {
 				duration: 0.3,
 			});
 		};
-
 		rotateText();
 		body.addEventListener('mousemove', onMouseMove);
 		document.addEventListener('scroll', checkScroll)
