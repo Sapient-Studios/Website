@@ -15,10 +15,6 @@
 	cursor: pointer;
 }
 
-.looper__innerList {
-	gap: 1vw;
-}
-
 .get-in-touch {
 	padding-left: 1rem;
 	padding-right: 1rem;

@@ -6,6 +6,8 @@ import Notion from "../../assets/images/Notion.svg";
 import Openai from "../../assets/images/Openai.svg";
 // import Slack from "../../assets/images/Slack.svg";
 import Zapier from "../../assets/images/Zapier.svg";
+import Make from "../../assets/images/Make.svg";
+import Slack from "../../assets/images/Slack.svg";
 
 function SolutionsPage({ navbarHeight }: { navbarHeight: number }) {
 
@@ -27,20 +29,21 @@ function SolutionsPage({ navbarHeight }: { navbarHeight: number }) {
 				</div>
 
 				{/* p5? */}
-				<ToolsCarousel speed={3} direction="right">
-					<div className="contentBlock contentBlock--one">
+				<ToolsCarousel speed={7} direction="right">
+					<div className="contentBlock">
 						<img src={Openai} alt="" />
 					</div>
-					<div className="contentBlock contentBlock--one">
+					<div className="contentBlock">
+						<img src={Make} alt="" />
+					</div>
+					<div className="contentBlock">
 						<img src={Notion} alt="" />
 					</div>
-					<div className="contentBlock contentBlock--one">
+					<div className="contentBlock">
 						<img src={Zapier} alt="" />
 					</div>
-				</ToolsCarousel>
-				<ToolsCarousel direction="right" speed={0.4}>
-					<div className="contentBlock contentBlock--two">
-						<i>faster 🚀</i>
+					<div className="contentBlock">
+						<img src={Slack} alt="" />
 					</div>
 				</ToolsCarousel>
 			</main>
