@@ -1,6 +1,7 @@
 import "./style.css";
 import SolutionsTable from "../../components/SolutionsTable";
 import ToolsCarousel from "../../components/ToolsCarousel";
+import Globe from "src/components/Globe";
 
 import Notion from "../../assets/images/Notion.svg";
 import Openai from "../../assets/images/Openai.svg";
@@ -19,7 +20,7 @@ function SolutionsPage({ navbarHeight }: { navbarHeight: number }) {
 
 	return (
 		<section id="solutions" className="solutions-section" style={{ marginTop: `${offset}px`, paddingTop: ` ${padding}px` }}>
-			<h2 className="solutions-title" style={{color: "white"}}>
+			<h2 className="solutions-title" style={{ color: "white" }}>
 				Explore some our solutions <br />
 				for your challenges
 			</h2>
@@ -27,10 +28,11 @@ function SolutionsPage({ navbarHeight }: { navbarHeight: number }) {
 				<div className="solutions-content-wrapper">
 					<SolutionsTable />
 				</div>
-
-				{/* p5? */}
-				<ToolsCarousel speed={7} direction="right">
-					<div className="contentBlock">
+				<div className="globe">
+					<Globe />
+				</div>
+				<ToolsCarousel speed={3} direction="right">
+					<div className="contentBlock contentBlock--one">
 						<img src={Openai} alt="" />
 					</div>
 					<div className="contentBlock">
@@ -47,8 +49,7 @@ function SolutionsPage({ navbarHeight }: { navbarHeight: number }) {
 					</div>
 				</ToolsCarousel>
 			</main>
-
-		</section>
+		</section >
 	);
 }
 

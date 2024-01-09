@@ -11,7 +11,7 @@
 	gap: 2rem;
 }
 
-.solutions-title{
+.solutions-title {
 	padding: 0 6vw;
 }
 
@@ -19,17 +19,28 @@
 	width: 100%;
 	height: fit-content;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	
-	gap: 4rem;
+	gap: 3rem;
 }
 
-.solutions-content-wrapper{
-	padding: 0 6vw;
+.solutions-content-wrapper {
+	padding: 5vh 6vw;
+	width: 100%;
 }
 
+.solutions-content-wrapper {
+	gap: 3rem;
+}
+
+.globe {
+	position: relative;
+	z-index: 1 !important;
+	top: 0vh;
+	right: 0;
+	width: 20vw;
+	height: 20vw;
+	/* scale*/
+	transform: rotate(-25deg);
+}
 
 /* create the key media queries */
 

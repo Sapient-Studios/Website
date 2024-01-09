@@ -3,7 +3,7 @@ import gsap from 'gsap';
 
 import './style.css';
 const msg = "Keep Scrolling - Keep Scrolling - ";
-const radius = 40;
+const radius = 50;
 const rotationSpeed = 0.8; // Adjust this value to control speed (larger number = faster rotation)
 
 const CustomCursor = () => {
@@ -39,7 +39,7 @@ const CustomCursor = () => {
 				cursorText.forEach((char, index) => {
 					const angle = ((360 / cursorText.length) * index) + rotation;
 					const charX = cursorPos.current.x - 3 + radius * Math.cos(angle * Math.PI / 180);
-					const charY = cursorPos.current.y - 14 + radius * Math.sin(angle * Math.PI / 180);
+					const charY = cursorPos.current.y - 12 + radius * Math.sin(angle * Math.PI / 180);
 					const charAngle = angle + 90;
 
 					gsap.to(char, {
@@ -61,6 +61,7 @@ const CustomCursor = () => {
 				setRotate(false);
 			}
 		};
+
 		const onMouseMove = (e) => {
 			let xCoord = e.clientX;
 			let yCoord = e.clientY;
@@ -76,15 +77,15 @@ const CustomCursor = () => {
 				cursorPos.current.y = yCoord;
 
 				gsap.to(bigBall, {
-					x: xCoord - 16,
-					y: yCoord - 18,
+					x: xCoord - 22,
+					y: yCoord - 23,
 					duration: 0.4,
 					ease: "ease-in-out",
 				});
 
 				gsap.to(smallBall, {
-					x: xCoord - 1,
-					y: yCoord - 13,
+					x: xCoord - 5,
+					y: yCoord - 18,
 					duration: 0.1,
 				});
 			}
@@ -132,7 +133,7 @@ const CustomCursor = () => {
 				</svg>
 			</div>
 			<div className="cursor__ball cursor__ball--small">
-				<svg height="10" width="10"> 
+				<svg height="10" width="10">
 					<circle cx="5" cy="5" r="5" strokeWidth="0"></circle>
 				</svg>
 			</div>
