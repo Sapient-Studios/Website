@@ -31,23 +31,26 @@ function SolutionsPage({ navbarHeight }: { navbarHeight: number }) {
 				<div className="globe">
 					<Globe />
 				</div>
-				<ToolsCarousel speed={3} direction="right">
-					<div className="contentBlock contentBlock--one">
-						<img src={Openai} alt="" />
-					</div>
-					<div className="contentBlock">
-						<img src={Make} alt="" />
-					</div>
-					<div className="contentBlock">
-						<img src={Notion} alt="" />
-					</div>
-					<div className="contentBlock">
-						<img src={Zapier} alt="" />
-					</div>
-					<div className="contentBlock">
-						<img src={Slack} alt="" />
-					</div>
-				</ToolsCarousel>
+				<div style={{maskImage: `linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(255, 255, 255) 20vw, rgb(0, 0, 0) 80vw, rgba(0, 0, 0, 0) 100%)`}}>
+				{/* , filter: `grayscale(100%)` */}
+					<ToolsCarousel speed={3} direction="right">
+						<div className="contentBlock contentBlock--one">
+							<img src={Openai} alt="" />
+						</div>
+						<div className="contentBlock">
+							<img src={Make} alt="" />
+						</div>
+						<div className="contentBlock">
+							<img src={Notion} alt="" />
+						</div>
+						<div className="contentBlock">
+							<img src={Zapier} alt="" />
+						</div>
+						<div className="contentBlock">
+							<img src={Slack} alt="" />
+						</div>
+					</ToolsCarousel>
+				</div>
 			</main>
 		</section >
 	);

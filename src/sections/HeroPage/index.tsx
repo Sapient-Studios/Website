@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import "./style.css";
 import ButtonHero from "src/components/ButtonHero";
 import Logo from "src/assets/images/LogoMain";
+import HeroCurves from "../../assets/images/HeroCurves.svg";
+
 import CurvedLines from 'src/components/CurvedLines';
 
 function HeroPage() {
@@ -50,12 +52,12 @@ function HeroPage() {
 		setGradientStyle1({
 			// background: `linear-gradient(${angleRad1}rad, #0a69e6aa, #1bf4f9)`, take into acount the distance in the alpha of the firt color
 			background: `linear-gradient(${angleRad1}rad, rgba(10, 105, 230, ${1 - distancePercent1}), #1bf4f9)`,
-			textShadow: `0 0 5px rgba(10, 105, 230, ${1 - distancePercent1})`,
+			// textShadow: `0 0 5px rgba(10, 105, 230, ${1 - distancePercent1})`,
 		});
 
 		setGradientStyle2({
 			background: `linear-gradient(${angleRad2}rad, rgba(10, 105, 230, ${1 - distancePercent2}), #1bf4f9)`,
-			textShadow: `0 0 5px rgba(10, 105, 230, ${1 - distancePercent2})`,
+			// textShadow: `0 0 5px rgba(10, 105, 230, ${1 - distancePercent2})`,
 		});
 	};
 
@@ -79,7 +81,7 @@ function HeroPage() {
 	}, []);
 
 	return (
-		<section className='hero-section' onMouseMove={handleMouseMove}>
+		<section className='hero-section' onMouseMove={handleMouseMove} style={{backgroundImage: `url(${HeroCurves})`}}>
 			<div className="hero-header">
 				<Logo />
 			</div>

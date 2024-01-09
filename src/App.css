@@ -8,12 +8,3 @@
 .mouse-cursor-wrapper {
 	opacity: 1 !important;
 }
-
-.curved-lines-container {
-	width: auto;
-	height: 100vh;
-	position: absolute;
-	overflow: hidden;
-	right: 0%;
-	top: 0%;
-}

@@ -6,7 +6,6 @@ import SolutionsPage from './sections/SolutionsPage';
 import ApproachPage from './sections/ApproachPage';
 import ContactPage from './sections/ContactPage';
 import Footer from './components/Footer';
-import HeroCurves from "./assets/images/HeroCurves.svg";
 import CursorAnimation from './components/CursorLogic';
 
 function App() {
@@ -15,9 +14,6 @@ function App() {
   return (
     <div className="App" >
       <CursorAnimation />
-      <div className='curved-lines-container' >
-        <img src={HeroCurves}/>
-      </div>
       <HeroPage />
       <Navbar onHeightChange={setNavbarHeight} />
       <SolutionsPage navbarHeight={navbarHeight} />
