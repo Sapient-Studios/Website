@@ -1,6 +1,11 @@
 .footer {
     background-color: var(--bg-color);
     color: var(--white);
+    background-size: 15%, 20%;
+    /* Adjust as needed */
+    background-position: top left -10%, top right -10%;
+    /* Adjust as needed */
+    background-repeat: no-repeat, no-repeat;
 
     height: 10rem;
     width: 100%;
@@ -12,6 +17,21 @@
     border-top: 1px solid var(--blue-main);
 
     padding: 1.5rem;
+}
+
+.background-container {
+    top: 0;
+
+    position: absolute;
+    height: 10rem;
+    overflow: hidden;
+
+}
+
+.footer-background {
+    position: absolute;
+    bottom: 0;
+    left: -20%;
 }
 
 .footer .footer-container {
@@ -38,17 +58,17 @@
     height: 3rem;
 }
 
-.center-links-container{
+.center-links-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     height: fit-content;
     gap: 2rem;
-    
+
 }
 
-.center-links-container a{
+.center-links-container a {
     height: fit-content;
     text-decoration: none;
     color: var(--white);

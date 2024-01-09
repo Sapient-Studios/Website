@@ -16,7 +16,7 @@ function App() {
     <div className="App" >
       <CursorAnimation />
       <div className='curved-lines-container' >
-        <img src={HeroCurves} alt="" />
+        <img src={HeroCurves}/>
       </div>
       <HeroPage />
       <Navbar onHeightChange={setNavbarHeight} />

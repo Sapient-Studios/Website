@@ -3,11 +3,16 @@ import "./styles.css";
 import FooterLogo from "../../assets/images/FooterLogo.png";
 import LinkedIn from "../../assets/images/LinkedIn.svg";
 import X from "../../assets/images/X.svg";
+import Footer1 from "../../assets/images/Footer1.png";
+import Footer2 from "../../assets/images/Footer2.png";
 
 function Footer() {
 
     return (
-        <footer className="footer">
+        <footer className="footer" style={{backgroundImage: `url(${Footer1}), url(${Footer2})`}}>
+            {/* <div className="background-container"></div>
+            <img src={Footer1} className="footer-background 1"/>
+            <img src={Footer2} className="footer-background 2" /> */}
             <div className="footer-container" id="footer-1">
                 <span>© 2024 Sapient Studio. <br /> All rights reserved.</span>
             </div>

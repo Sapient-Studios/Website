@@ -2,6 +2,10 @@ import "./style.css";
 import SolutionsTable from "../../components/SolutionsTable";
 import ToolsCarousel from "../../components/ToolsCarousel";
 
+import Notion from "../../assets/images/Notion.svg";
+import Openai from "../../assets/images/Openai.svg";
+// import Slack from "../../assets/images/Slack.svg";
+import Zapier from "../../assets/images/Zapier.svg";
 
 function SolutionsPage({ navbarHeight }: { navbarHeight: number }) {
 
@@ -13,28 +17,33 @@ function SolutionsPage({ navbarHeight }: { navbarHeight: number }) {
 
 	return (
 		<section id="solutions" className="solutions-section" style={{ marginTop: `${offset}px`, paddingTop: ` ${padding}px` }}>
+			<h2 className="solutions-title" style={{color: "white"}}>
+				Explore some our solutions <br />
+				for your challenges
+			</h2>
 			<main className="solutions-main">
 				<div className="solutions-content-wrapper">
-					<h2 className="solutions-title">
-						Explore our solutions for <br />
-						your challenges
-					</h2>
 					<SolutionsTable />
 				</div>
 
 				{/* p5? */}
-
+				<ToolsCarousel speed={3} direction="right">
+					<div className="contentBlock contentBlock--one">
+						<img src={Openai} alt="" />
+					</div>
+					<div className="contentBlock contentBlock--one">
+						<img src={Notion} alt="" />
+					</div>
+					<div className="contentBlock contentBlock--one">
+						<img src={Zapier} alt="" />
+					</div>
+				</ToolsCarousel>
+				<ToolsCarousel direction="right" speed={0.4}>
+					<div className="contentBlock contentBlock--two">
+						<i>faster 🚀</i>
+					</div>
+				</ToolsCarousel>
 			</main>
-			<ToolsCarousel speed={3} direction="right">
-				<div className="contentBlock contentBlock--one">
-					Google
-				</div>
-			</ToolsCarousel>
-			<ToolsCarousel direction="right" speed={0.4}>
-				<div className="contentBlock contentBlock--two">
-					<i>faster 🚀</i>
-				</div>
-			</ToolsCarousel>
 
 		</section>
 	);

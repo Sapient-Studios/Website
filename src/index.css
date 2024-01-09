@@ -72,7 +72,7 @@
 * {
 	--bg-color: #171716;
 	--white: #f4efef;
-	--white-40: #f4efef66;
+	--white-40: rgba(153, 153, 153, 1);
 	--grey: #d9d9d9;
 	--blue-main: #1bf4f9;
 	--blue-dark: #002BDC;

@@ -1,14 +1,16 @@
 import React, { useRef, useState, useCallback, useEffect } from "react";
 import "./style.css";
 
-
-function ToolsCarousel({ speed, direction, children, }: {
+function ToolsCarousel({
+    speed,
+    direction,
+    children,
+}: {
     speed: number;
     direction: "right" | "left";
     children: React.ReactNode;
 }) {
     const [looperInstances, setLooperInstances] = useState(1);
-
     const outerRef = useRef<HTMLDivElement>(null);
     const innerRef = useRef<HTMLDivElement>(null);
 
@@ -79,6 +81,5 @@ function ToolsCarousel({ speed, direction, children, }: {
         </div>
     );
 }
-
 
 export default ToolsCarousel;

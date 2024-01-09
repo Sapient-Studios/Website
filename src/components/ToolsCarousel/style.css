@@ -39,6 +39,7 @@
     font-weight: 600;
     text-align: center;
     border-radius: 16px;
+    padding: 2rem;
 }
 
 .contentBlock--one {
@@ -46,6 +47,13 @@
     background: rgba(255, 255, 255, 0.05);
     font-weight: 600;
     font-size: 18px;
+}
+
+.contentBlock--one img{
+    
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .contentBlock--one:last-of-type {

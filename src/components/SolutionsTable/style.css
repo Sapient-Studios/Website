@@ -3,37 +3,54 @@
 }
 
 .section {
-    /* border: 1px solid black; */
     margin-bottom: 8px;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 2s ease;
 }
 
 .section.open {
     max-height: 20rem;
-    /* Set a suitable max-height for your content */
 }
 
 .section-header {
+    max-height: 2rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 8px;
-    /* cursor: pointer; */
     background-color: transparent;
 }
 
+.section-header h3 {
+    color: var(--white);
+}
+
 .section-content {
-    padding: 8px;
+    color: var(--white);
+
+    padding: 8px 16px;
+    font-size: 0.9rem;
 }
 
 .icon {
+    fill: var(--blue-main);
     width: 24px;
     height: 24px;
     background-size: cover;
     transition: transform 0.3s ease;
 }
 
-.icon.close {
+.icon.open {
     transform: rotate(45deg);
+}
+
+.closing-line{
+    border-top: 1px solid #999999 !important;
+    border-radius: 10px;
+}
+
+.closing-line.open{
+    border-top: 2px solid var(--blue-main) !important;
 }

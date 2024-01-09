@@ -1,6 +1,5 @@
 .solutions-section {
 	background-color: var(--bg-color);
-	color: var(--white);
 	height: fit-content;
 	font-size: calc(10px + 2vmin);
 	min-height: 100vh;
@@ -8,24 +7,27 @@
 
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	gap: 4rem;
+	align-items: flex-start;
+	gap: 2rem;
+}
+
+.solutions-title{
+	padding: 0 6vw;
 }
 
 .solutions-main {
+	width: 100%;
+	height: fit-content;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	
-	padding: 0 6vw;
-	width: 100%;
-	
-	height: fit-content;
+	gap: 3rem;
 }
 
 .solutions-content-wrapper{
-	gap: 3rem;
-
+	padding: 0 6vw;
 }
 
 

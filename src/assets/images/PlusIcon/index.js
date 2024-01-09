@@ -1,13 +1,29 @@
 import React from "react";
 
-function PlusIcon() {
+export default function PlusIcon({color, stroke, size}) {
+    const halfSize = size / 2;
     return (
-        <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="16.9346" y1="1.16748" x2="16.9346" y2="29.1675" stroke="#F4EFEF" stroke-width="2" stroke-linecap="round" />
-            <line x1="1.93506" y1="14.1675" x2="29.9351" y2="14.1675" stroke="#F4EFEF" stroke-width="2" stroke-linecap="round" />
+        <svg
+            width={size}
+            height={size}
+            viewBox={`0 0 ${size} ${size}`}
+            fill={color}
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d={`M${halfSize} 0V${size}`}
+                stroke={color}
+                strokeWidth={stroke}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d={`M0 ${halfSize}H${size}`}
+                stroke={color}
+                strokeWidth={stroke}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
         </svg>
-
     );
 }
-
-export default PlusIcon;
