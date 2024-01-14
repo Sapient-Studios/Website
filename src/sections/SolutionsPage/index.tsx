@@ -27,12 +27,12 @@ function SolutionsPage({ navbarHeight }: { navbarHeight: number }) {
 			<main className="solutions-main">
 				<div className="solutions-content-wrapper">
 					<SolutionsTable />
+					<div className="globe">
+						<Globe />
+					</div>
 				</div>
-				<div className="globe">
-					<Globe />
-				</div>
-				<div style={{maskImage: `linear-gradient(to right, rgba(0, 0, 0, 0) 6vw, rgb(255, 255, 255) 20vw, rgb(255, 255, 255) 80vw, rgba(0, 0, 0, 0) 94vw)`, padding: `0 6vw`}}>
-				{/* , filter: `grayscale(100%)` */}
+				<div style={{ maskImage: `linear-gradient(to right, rgba(0, 0, 0, 0) 6vw, rgb(255, 255, 255) 20vw, rgb(255, 255, 255) 80vw, rgba(0, 0, 0, 0) 94vw)`, padding: `0 6vw` }}>
+					{/* , filter: `grayscale(100%)` */}
 					<ToolsCarousel speed={15} direction="right">
 						<div className="contentBlock contentBlock--one">
 							<img src={Openai} alt="" />

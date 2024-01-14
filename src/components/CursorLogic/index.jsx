@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 import './style.css';
 const msg = "Keep Scrolling - Keep Scrolling - ";
 const radius = 50;
 const rotationSpeed = 0.8; // Adjust this value to control speed (larger number = faster rotation)
+const lowerBound = 100; // Lower bound of the globe's Y position
 
 const CustomCursor = () => {
 	const [widthMatches, setWidthMatches] = useState(false);
@@ -34,7 +35,7 @@ const CustomCursor = () => {
 
 		// Function to rotate the text
 		const rotateText = () => {
-			if (rotate && !cursorInitialized) {
+			if (!cursorInitialized) {
 				rotation += rotationSpeed; // Increment rotation
 				cursorText.forEach((char, index) => {
 					const angle = ((360 / cursorText.length) * index) + rotation;
@@ -56,9 +57,26 @@ const CustomCursor = () => {
 			}
 		};
 
+		const clearRotate = () => {
+			// display none cursor text
+			cursorText.forEach((char, index) => {
+				// set display none in classname char
+				gsap.to(char, {
+					opacity: 0,
+					duration: 0.35,
+				});
+			});
+		};
+
 		const checkScroll = () => {
-			if (window.scrollY > window.innerHeight * 0.5) {
+			// If the user has scrolled past the lower bound, stop rotating the text
+			if (window.scrollY > lowerBound) {
 				setRotate(false);
+				cancelAnimationFrame(rotateText);
+				clearRotate();
+			} else {
+				setRotate(true);
+				rotateText();
 			}
 		};
 
@@ -105,7 +123,11 @@ const CustomCursor = () => {
 				duration: 0.3,
 			});
 		};
-		// rotateText();
+
+		if (rotate) {
+			rotateText();
+		}
+
 		body.addEventListener('mousemove', onMouseMove);
 		document.addEventListener('scroll', checkScroll)
 		document.querySelectorAll('.hoverable').forEach((element) => {
@@ -123,7 +145,7 @@ const CustomCursor = () => {
 			});
 			// cancelAnimationFrame(rotateText);
 		};
-	}, [widthMatches, rotate]);
+	}, [widthMatches]);
 
 	return (
 		<div className="cursor" ref={cursorRef} style={{ display: widthMatches ? 'block' : 'none' }}>
@@ -137,13 +159,13 @@ const CustomCursor = () => {
 					<circle cx="5" cy="5" r="5" strokeWidth="0"></circle>
 				</svg>
 			</div>
-			{/* <div className="cursor-text">
+			<div className="cursor-text">
 				{msg.split("").map((char, index) => (
 					<span className="char" key={index}>
 						{char}
 					</span>
 				))}
-			</div> */}
+			</div>
 		</div>
 	);
 };

@@ -85,7 +85,7 @@ function HeroPage() {
 		<section className='hero-section' onMouseMove={handleMouseMove} style={{ backgroundImage: `url(${HeroCurves})` }}>
 
 			<style>
-		
+
 			</style>
 			<div className="hero-header">
 				<img src={HeroLogo} />
@@ -95,9 +95,9 @@ function HeroPage() {
 					Making your <span className="hero-gradient-text" style={gradientStyle1}>business</span> <br />
 					<span className="hero-gradient-text2" style={gradientStyle2}>efficient</span> with AI
 				</h1>
-				<h1 className="hero-title">
+				{/* <h1 className="hero-title">
 					<span className="test">business</span>
-				</h1>
+				</h1> */}
 
 				<ButtonHero speed={8} width="12rem" height="3rem" />
 			</main>

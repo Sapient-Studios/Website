@@ -3,9 +3,9 @@ import * as THREE from 'three';
 import "./style.css";
 
 const velocity = 0.001; // Adjust this value to change rotation speed
-const zpos = 10;
 
 const Globe = () => {
+	const zpos = 9;
 	const globeRef = useRef();
 
 
@@ -146,7 +146,16 @@ const Globe = () => {
 
 
 	return (
-		<div ref={globeRef} style={{ width: '30vw', height: '30vw' }}>
+		<div style={{ position: 'relative', width: '45vw', height: '45vw' }}>
+			<div ref={globeRef} style={{ width: '100%', height: '100%' }}></div>
+			<div style={{
+				position: 'absolute',
+				top: 0,
+				left: 0,
+				right: 0,
+				bottom: 0,
+				background: 'radial-gradient(circle at bottom, var(--bg-color) 0%, rgba(255,255,255,0) 100%)',
+			}}></div>
 		</div>
 	);
 };

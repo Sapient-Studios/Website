@@ -18,28 +18,29 @@
 .solutions-main {
 	width: 100%;
 	height: fit-content;
+	overflow-x: hidden;
 
 	gap: 3rem;
 }
 
 .solutions-content-wrapper {
 	padding: 5vh 6vw;
+	padding-bottom: 0vh !important;
 	width: 100%;
-}
-
-.solutions-content-wrapper {
-	gap: 3rem;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
 }
 
 .globe {
 	position: relative;
 	z-index: 1 !important;
-	top: 0vh;
-	right: 0;
-	width: 20vw;
-	height: 20vw;
+	right: -10vw;
+	width: 50vw !important;
+	height: 50vw;
 	/* scale*/
 	transform: rotate(-25deg);
+	overflow: hidden;
 }
 
 /* create the key media queries */
