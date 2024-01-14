@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import "./style.css";
 import ButtonHero from "src/components/ButtonHero";
-import Logo from "src/assets/images/LogoMain";
-import HeroCurves from "../../assets/images/HeroCurves.svg";
+import HeroLogo from "src/assets/images/HeroLogo.svg";
+import HeroCurves from "../../assets/images/HeroCurves";
 
 import CurvedLines from 'src/components/CurvedLines';
 
@@ -81,17 +81,25 @@ function HeroPage() {
 	}, []);
 
 	return (
-		<section className='hero-section' onMouseMove={handleMouseMove} style={{backgroundImage: `url(${HeroCurves})`}}>
+
+		<section className='hero-section' onMouseMove={handleMouseMove} style={{ backgroundImage: `url(${HeroCurves})` }}>
+
+			<style>
+		
+			</style>
 			<div className="hero-header">
-				<Logo />
+				<img src={HeroLogo} />
 			</div>
 			<main className="hero-main">
 				<h1 className="hero-title">
 					Making your <span className="hero-gradient-text" style={gradientStyle1}>business</span> <br />
 					<span className="hero-gradient-text2" style={gradientStyle2}>efficient</span> with AI
 				</h1>
+				<h1 className="hero-title">
+					<span className="test">business</span>
+				</h1>
 
-				<ButtonHero width="12rem" height="4rem" />
+				<ButtonHero speed={8} width="12rem" height="3rem" />
 			</main>
 		</section>
 	);

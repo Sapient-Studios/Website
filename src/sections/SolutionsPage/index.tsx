@@ -31,9 +31,9 @@ function SolutionsPage({ navbarHeight }: { navbarHeight: number }) {
 				<div className="globe">
 					<Globe />
 				</div>
-				<div style={{maskImage: `linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(255, 255, 255) 20vw, rgb(0, 0, 0) 80vw, rgba(0, 0, 0, 0) 100%)`}}>
+				<div style={{maskImage: `linear-gradient(to right, rgba(0, 0, 0, 0) 6vw, rgb(255, 255, 255) 20vw, rgb(255, 255, 255) 80vw, rgba(0, 0, 0, 0) 94vw)`, padding: `0 6vw`}}>
 				{/* , filter: `grayscale(100%)` */}
-					<ToolsCarousel speed={3} direction="right">
+					<ToolsCarousel speed={15} direction="right">
 						<div className="contentBlock contentBlock--one">
 							<img src={Openai} alt="" />
 						</div>

@@ -105,7 +105,7 @@ const CustomCursor = () => {
 				duration: 0.3,
 			});
 		};
-		rotateText();
+		// rotateText();
 		body.addEventListener('mousemove', onMouseMove);
 		document.addEventListener('scroll', checkScroll)
 		document.querySelectorAll('.hoverable').forEach((element) => {
@@ -121,7 +121,7 @@ const CustomCursor = () => {
 				element.removeEventListener('mouseenter', onMouseHover);
 				element.removeEventListener('mouseleave', onMouseHoverOut);
 			});
-			cancelAnimationFrame(rotateText);
+			// cancelAnimationFrame(rotateText);
 		};
 	}, [widthMatches, rotate]);
 
@@ -137,13 +137,13 @@ const CustomCursor = () => {
 					<circle cx="5" cy="5" r="5" strokeWidth="0"></circle>
 				</svg>
 			</div>
-			<div className="cursor-text">
+			{/* <div className="cursor-text">
 				{msg.split("").map((char, index) => (
 					<span className="char" key={index}>
 						{char}
 					</span>
 				))}
-			</div>
+			</div> */}
 		</div>
 	);
 };

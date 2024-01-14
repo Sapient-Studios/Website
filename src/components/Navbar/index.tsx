@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import './styles.css';
-import IconMain from '../../assets/images/IconMain';
+import NavIcon from '../../assets/images/NavIcon.svg';
 import ButtonNav from '../ButtonNav';
 
 function Navbar({ onHeightChange }: { onHeightChange: (height: number) => void }) {
@@ -15,7 +15,7 @@ function Navbar({ onHeightChange }: { onHeightChange: (height: number) => void }
 	return (
 		<nav id='navbar' ref={navbarRef}>
 			<div className='navbar-logo-wrapper'>
-				<IconMain />
+				<img src={NavIcon} />
 			</div>
 			<div className='navbar-links'>
 				<a href='/#solutions' className='hoverable'>Solutions</a>
