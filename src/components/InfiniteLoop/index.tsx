@@ -1,7 +1,7 @@
 import React, { useRef, useState, useCallback, useEffect } from "react";
 import "./style.css";
 
-function ToolsCarousel({
+function InfiniteLoop({
     speed,
     direction,
     children,
@@ -82,4 +82,4 @@ function ToolsCarousel({
     );
 }
 
-export default ToolsCarousel;
+export default InfiniteLoop;

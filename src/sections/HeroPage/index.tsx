@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import "./style.css";
 import ButtonHero from "src/components/ButtonHero";
 import HeroLogo from "src/assets/images/HeroLogo.svg";
-import HeroCurves from "../../assets/images/HeroCurves";
-
-import CurvedLines from 'src/components/CurvedLines';
+import HeroCurves from "../../assets/images/HeroCurves.svg";
+import KeepScrolling from "src/components/KeepScrolling";
+import ScrollScript from "src/components/ScrollScript";
 
 function HeroPage() {
 	const [gradientStyle1, setGradientStyle1] = useState({});
@@ -83,24 +83,24 @@ function HeroPage() {
 	return (
 
 		<section className='hero-section' onMouseMove={handleMouseMove} style={{ backgroundImage: `url(${HeroCurves})` }}>
-
-			<style>
-
-			</style>
+			{/* <HeroCurves style=""/> */}
 			<div className="hero-header">
 				<img src={HeroLogo} />
 			</div>
 			<main className="hero-main">
 				<h1 className="hero-title">
-					Making your <span className="hero-gradient-text" style={gradientStyle1}>business</span> <br />
-					<span className="hero-gradient-text2" style={gradientStyle2}>efficient</span> with AI
+					Making your <span className="test" >business</span> <br />
+					<span className="test" >efficient</span> with AI
 				</h1>
 				{/* <h1 className="hero-title">
 					<span className="test">business</span>
 				</h1> */}
 
-				<ButtonHero speed={8} width="12rem" height="3rem" />
+				<ButtonHero href="#contact" speed={8} width="12rem" height="3rem" />
 			</main>
+			<a href='#solutions' className='keep-scrolling-container hoverable' onClick={ScrollScript}>
+				<KeepScrolling/>
+			</a>
 		</section>
 	);
 }

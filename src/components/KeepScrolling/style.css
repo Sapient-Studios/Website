@@ -1,0 +1,45 @@
+.keep-scrolling {
+  width: 6rem;
+  height: 6rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keep-scrolling::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(src/assets/images/KeepScrollingCircle.svg);
+  background-position: center;
+  background-size: contain;
+  --duration: 10s;
+  animation: rotating 10s linear infinite;
+}
+
+.keep-scrolling:hover::before {
+  /* animation: rotating 20s linear infinite; */
+  /* --duration: 20s; */
+  animation-play-state: paused;
+}
+
+.keep-scrolling svg {
+  width: 2rem;
+  height: 2rem;
+  rotate: 90deg;
+  z-index: 1;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,6 +1,6 @@
 import "./style.css";
 import SolutionsTable from "../../components/SolutionsTable";
-import ToolsCarousel from "../../components/ToolsCarousel";
+import InfiniteLoop from "../../components/InfiniteLoop";
 import Globe from "src/components/Globe";
 
 import Notion from "../../assets/images/Notion.svg";
@@ -33,7 +33,7 @@ function SolutionsPage({ navbarHeight }: { navbarHeight: number }) {
 				</div>
 				<div style={{ maskImage: `linear-gradient(to right, rgba(0, 0, 0, 0) 6vw, rgb(255, 255, 255) 20vw, rgb(255, 255, 255) 80vw, rgba(0, 0, 0, 0) 94vw)`, padding: `0 6vw` }}>
 					{/* , filter: `grayscale(100%)` */}
-					<ToolsCarousel speed={15} direction="right">
+					<InfiniteLoop speed={15} direction="right">
 						<div className="contentBlock contentBlock--one">
 							<img src={Openai} alt="" />
 						</div>
@@ -49,7 +49,7 @@ function SolutionsPage({ navbarHeight }: { navbarHeight: number }) {
 						<div className="contentBlock">
 							<img src={Slack} alt="" />
 						</div>
-					</ToolsCarousel>
+					</InfiniteLoop>
 				</div>
 			</main>
 		</section >

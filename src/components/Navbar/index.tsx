@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import './styles.css';
 import NavIcon from '../../assets/images/NavIcon.svg';
 import ButtonNav from '../ButtonNav';
+import ScrollScript from "src/components/ScrollScript";
 
 function Navbar({ onHeightChange }: { onHeightChange: (height: number) => void }) {
 	const navbarRef = useRef<HTMLElement | null>(null);
@@ -18,8 +19,8 @@ function Navbar({ onHeightChange }: { onHeightChange: (height: number) => void }
 				<img src={NavIcon} />
 			</div>
 			<div className='navbar-links'>
-				<a href='/#solutions' className='hoverable'>Solutions</a>
-				<a href='/#approach' className='hoverable'>Approach</a>
+				<a href='#solutions' className='hoverable' onClick={ScrollScript}>Solutions</a>
+				<a href='#approach' className='hoverable' onClick={ScrollScript}>Approach</a>
 				{/* <a></a> */}
 			</div>
 			<ButtonNav />

@@ -1,5 +1,5 @@
 .contact-section {
-    height: 120vh;
+    height: 100vh;
     position: relative;
     /* Add position relative to the container */
     background-color: var(--bg-color);
