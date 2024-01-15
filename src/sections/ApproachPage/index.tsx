@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import ApproachStep1 from "../../assets/images/ApproachStep1.svg";
 import ApproachStep2 from "../../assets/images/ApproachStep2.svg";
 import ApproachStep3 from "../../assets/images/ApproachStep3.svg";
-import { animated, useSpring, useSprings } from "react-spring";
+import { animated, useSprings } from "react-spring";
 import "./style.css";
 
 const divs = [

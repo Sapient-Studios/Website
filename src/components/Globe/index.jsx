@@ -68,18 +68,17 @@ const Globe = () => {
 		animate();
 
 		// Event listener for mouse movement
-		/* const handleMouseMove = event => {
+		const handleMouseMove = event => {
 			if (window.width < 1000) return;
 
-			let dx = (event.clientX - window.innerWidth / 2) * 0.005;
-			let dy = (event.clientY - window.innerHeight / 2) * 0.005;
+			const rotationSpeed = 0.0001;
+			const xRotation = rotationSpeed * event.movementY;
+			const yRotation = rotationSpeed * event.movementX;
 
-			gsap.to(scene.rotation, {
-				y: '+=' + dx * 0.00225,
-				x: '+=' + dy * 0.00225,
-				duration: 0.5
-			});
+			scene.rotation.x += xRotation;
+			scene.rotation.y += yRotation;
 		};
+
 
 		document.addEventListener('mousemove', handleMouseMove);
 
@@ -87,7 +86,7 @@ const Globe = () => {
 		return () => {
 			document.removeEventListener('mousemove', handleMouseMove);
 			globeRef.current.removeChild(renderer.domElement);
-		}; */
+		};
 	}, []);
 
 	const createGlobeLines = (scene, radius, totalLatitudeLines, totalLongitudeLines, renderLatitudeLines, renderLongitudeLines) => {

@@ -27,7 +27,7 @@ function SolutionsPage({ navbarHeight }: { navbarHeight: number }) {
 			<main className="solutions-main">
 				<div className="solutions-content-wrapper">
 					<SolutionsTable />
-					<div className="globe">
+					<div className="globe" id="globe">
 						<Globe />
 					</div>
 				</div>
