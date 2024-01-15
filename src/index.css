@@ -77,6 +77,13 @@
 	--blue-dark: #002bdc;
 
 	box-sizing: border-box;
+
+	
+}
+
+*::selection {
+	background: var(--blue-main);
+	color: var(--bg-color);
 }
 
 html {
@@ -120,7 +127,7 @@ h3 {
 	margin-block-end: 0;
 
 	/* font-family: Satoshi; */
-	font-size: 1rem;
+	font-size: 1.3rem;
 	font-style: normal;
 	font-weight: 700;
 	line-height: normal;

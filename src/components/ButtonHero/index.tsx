@@ -1,15 +1,17 @@
 import './styles.css'
 import Arrow from '../../assets/images/Arrow'
-import ToolsCarousel from '../ToolsCarousel'
+import InfiniteLoop from '../InfiniteLoop'
+import ScrollScript from '../ScrollScript'
 
-function ButtonHero({ speed, width, height }: { speed: number, width?: string, height?: string }) {
-	// &rarr; doesnt work.
+function ButtonHero({ href, speed, width, height }: { href?:string, speed: number, width?: string, height?: string }) {
+	
 	return (
-		<a className='main-btn hoverable' style={{
+		
+		<a href={href} onClick={ScrollScript} className='main-btn hoverable' style={{
 			width: width ? width : "fit-content",
 			height: height ? height : "fit-content"
 		}}>
-			<ToolsCarousel direction="right" speed={speed}>
+			<InfiniteLoop direction="right" speed={speed}>
 				<Arrow color={"#F4EFEF"} />
 				<span className='get-in-touch'>
 					Get in touch
@@ -18,7 +20,7 @@ function ButtonHero({ speed, width, height }: { speed: number, width?: string, h
 				<span className='get-in-touch'>
 					Get in touch
 				</span>
-			</ToolsCarousel>
+			</InfiniteLoop>
 		</a >
 
 	)

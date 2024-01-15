@@ -81,7 +81,7 @@ const SolutionsTable: React.FC = () => {
 
 const Section: React.FC<SectionProps> = ({ id, title, content, isOpen, onToggle }) => {
   return (
-    <div className={`section ${isOpen ? "open" : ""}`}>
+    <div className={`section ${isOpen ? "open" : ""} hoverable`}>
       <div className="section-header" onClick={onToggle}>
         <h3>{title}</h3>
         <div style={{ width: "fit-content", transform: `${isOpen ? "rotate(45deg)" : "none"}` }}>
