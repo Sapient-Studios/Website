@@ -15,9 +15,9 @@ function Navbar({ onHeightChange }: { onHeightChange: (height: number) => void }
 
 	return (
 		<nav id='navbar' ref={navbarRef}>
-			<div className='navbar-logo-wrapper'>
+			<a href="#landing" className='navbar-logo-wrapper hoverable' onClick={ScrollScript}>
 				<img src={NavIcon} />
-			</div>
+			</a>
 			<div className='navbar-links'>
 				<a href='#solutions' className='hoverable' onClick={ScrollScript}>Solutions</a>
 				<a href='#approach' className='hoverable' onClick={ScrollScript}>Approach</a>

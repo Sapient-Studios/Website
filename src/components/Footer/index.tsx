@@ -14,7 +14,7 @@ function Footer() {
             <img src={Footer1} className="footer-background 1"/>
             <img src={Footer2} className="footer-background 2" /> */}
             <div className="footer-container" id="footer-1">
-                <span>© 2024 Sapient Studio. <br /> All rights reserved.</span>
+                <span>© 2024 Sapient Studios. <br /> All rights reserved.</span>
             </div>
             <div className="footer-container" id="footer-2">
                 <img src={FooterLogo} alt="" />

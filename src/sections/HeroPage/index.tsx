@@ -82,7 +82,7 @@ function HeroPage() {
 
 	return (
 
-		<section className='hero-section' onMouseMove={handleMouseMove} style={{ backgroundImage: `url(${HeroCurves})` }}>
+		<section id="landing" className='hero-section' onMouseMove={handleMouseMove} style={{ backgroundImage: `url(${HeroCurves})` }}>
 			{/* <HeroCurves style=""/> */}
 			<div className="hero-header">
 				<img src={HeroLogo} />
