@@ -1,9 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
-import ApproachStep1 from "../../assets/images/ApproachStep1.svg";
-import ApproachStep2 from "../../assets/images/ApproachStep2.svg";
-import ApproachStep3 from "../../assets/images/ApproachStep3.svg";
-import { animated, useSprings } from "react-spring";
-import "./style.css";
+import gsap from 'gsap';
+import ApproachStep1 from '../../assets/images/ApproachStep1.svg';
+import ApproachStep2 from '../../assets/images/ApproachStep2.svg';
+import ApproachStep3 from '../../assets/images/ApproachStep3.svg';
+import ScrollableIndicator from "./components/scrollable";
+import './style.css';
+import { useEffect, useRef } from 'react';
+
 
 const divs = [
 	["Discovery",
@@ -20,59 +22,54 @@ const divs = [
 	]
 ]
 
-function ApproachPage() {
-	const cardRefs = useRef<Array<React.RefObject<HTMLDivElement>>>(divs.map(() => React.createRef()));
-	const [activeCard, setActiveCard] = useState(0);
+const ApproachCard = ({ title, content }: { title: string, content: string }) => {
+	const cardRef = useRef(null);
 
 	const handleScroll = () => {
-		const scrollPosition = window.scrollY + window.innerHeight * 0.8;
-		const cardPositions = cardRefs.current.map(ref => ref.current?.offsetTop);
-		const activeCard = cardPositions.findIndex(pos => pos && pos < scrollPosition);
-		setActiveCard(activeCard);
+		if (cardRef.current) {
+			const rect = (cardRef.current as any).getBoundingClientRect();
+			const isInView = rect.top >= 0 && rect.bottom <= window.innerHeight;
+
+			gsap.to(cardRef.current, {
+				opacity: isInView ? 1 : 0,
+				duration: 1, // Duration of the fade effect
+				delay: 0.5 // Delay before the fade effect kicks in
+			});
+		}
 	};
 
 	useEffect(() => {
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
+		window.addEventListener('scroll', handleScroll);
+		handleScroll(); // Initial check
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
 	}, []);
 
-	const cardSprings = useSprings(
-		divs.length,
-		divs.map((_, index) => ({
-			opacity: index === activeCard ? 1 : 0.5,
-			transform: `translateY(${index === activeCard ? 0 : 20}px)`,
-			from: { opacity: 0.5, transform: "translateY(20px)" },
-			config: { duration: 500 },
-		}))
+	return (
+		<div ref={cardRef} className="approach-card-wrapper">
+			<div className="approach-card">
+				<h2>{title}</h2>
+				<p>{content}</p>
+			</div>
+		</div>
 	);
-
-	const textSprings = useSprings(
-		divs.length,
-		divs.map((_, index) => ({
-			opacity: index === activeCard ? 1 : 0,
-			from: { opacity: 0 },
-			config: { duration: 500 },
-		}))
-	);
+};
 
 
+function ApproachPage() {
 	return (
 		<section id="approach" className="approach-section">
 			<h1>How we run things</h1>
 			<main className="approach-content-wrapper">
+				<ScrollableIndicator />
 				<div className="approach-cards">
-					{cardSprings.map((cardProps, index) => (
-						<animated.div
-							className="approach-card-wrapper"
-							key={divs[index][0]}
-							style={cardProps}
-							ref={cardRefs.current[index]}
-						>
-							<div className="approach-card">
-								<animated.h2 style={textSprings[index]}>{divs[index][0]}</animated.h2>
-								<animated.span style={textSprings[index]}>{divs[index][1]}</animated.span>
-							</div>
-						</animated.div>
+					{divs.map((div, index) => (
+						<ApproachCard
+							key={div[0]}
+							title={div[0]}
+							content={div[1]}
+						/>
 					))}
 				</div>
 			</main>

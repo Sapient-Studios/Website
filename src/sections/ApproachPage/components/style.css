@@ -1,0 +1,26 @@
+.scrollable-indicator {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+}
+
+.scroll-ball {
+	position: absolute;
+	top: 1.8%;
+	left: 50%; /* Adjust as needed to align with your SVG */
+	transform: translateX(-50%);
+	width: 3rem; /* Size of the ball */
+	height: 3rem;
+	background-color: #1bf4f9;
+	border-radius: 50%;
+}
+
+.overlay {
+	background: radial-gradient(circle, transparent 20%, #1bf4f9 70%);
+	clip-path: url(#svgClipPath); /* Reference to an SVG clip-path */
+}

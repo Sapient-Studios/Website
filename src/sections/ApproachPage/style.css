@@ -10,16 +10,15 @@
 	align-items: flex-start;
 	gap: 3rem;
 
-    overflow: hidden;
+	overflow: hidden;
+	max-width: 100%;
 }
 
 .approach-content-wrapper {
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
 	width: 100%;
 
-	height: fit-content;
+	height: 60vh;
 }
 
 #ball {
@@ -75,32 +74,31 @@
 .approach-cards {
 	display: flex;
 	flex: 1 0 auto;
-	height: fit-content;
-
-	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	justify-content: center;
+	justify-content: space-between;
+	height: 100%;
+	width: 80%;
 }
 
 .approach-card {
-	height: 20vh;
-
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	justify-content: center;
 	gap: 1rem;
-	padding: 2vw;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	padding-top: 2vh;
 }
 
 .approach-card h1 {
-	font-size: 1.6rem;
+	font-size: 1.8rem;
 	font-weight: 600;
+}
+
+.approach-card p {
+	font-size: 1.4rem;
+	font-weight: 400;
 }
 
 .approach-card span {
@@ -115,10 +113,8 @@
 	height: 10rem;
 }
 
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
-	
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
