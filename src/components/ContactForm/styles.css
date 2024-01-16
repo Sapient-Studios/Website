@@ -18,18 +18,19 @@
 
   background: var(--bg-color) url("../../assets/images/ContactBackground.svg")
     no-repeat center center;
+  background-size: cover;
   height: 100%;
 
   background-size: contain; /* or cover, depending on your preference */
   overflow: hidden;
-margin: auto 0 ;
+  margin: auto 0;
 }
 
 .contact-form-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   width: fit-content;
 
@@ -162,4 +163,13 @@ textarea::placeholder {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .contact-form-container {
+    slef-align: center;
+    max-width: 1200px !important;
+    width: 100%;
+  }
+
+  .contact-form-prop {
+    max-width: 600px !important;
+  }
 }

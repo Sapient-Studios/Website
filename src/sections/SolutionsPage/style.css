@@ -87,4 +87,13 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+
+  /* .solutions-section {
+
+    justify-content: center;
+  }
+
+  .solutions-title, .solutions-main {
+    max-width: 1700px;
+  } */
 }
