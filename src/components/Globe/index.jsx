@@ -4,7 +4,7 @@ import "./style.css";
 
 const velocity = 0.001; // Adjust this value to change rotation speed
 
-const Globe = () => {
+const Globe = ({size}) => {
 	const zpos = 9;
 	const globeRef = useRef();
 
@@ -145,7 +145,7 @@ const Globe = () => {
 
 
 	return (
-		<div style={{ position: 'relative', width: '45vw', height: '45vw' }}>
+		<div style={{ position: 'relative', width: `${size}`, height: `${size}` }}>
 			<div ref={globeRef} style={{ width: '100%', height: '100%' }}></div>
 			<div style={{
 				position: 'absolute',

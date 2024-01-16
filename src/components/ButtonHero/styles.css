@@ -1,12 +1,13 @@
 .main-btn {
+	display: block;
 	flex-shrink: 0;
-	color: var(--Palette-White, #f4efef);
+	/* color: var(--Palette-White, #f4efef); */
 	border-radius: 100px;
-	border: 1px solid var(--Palette-White, #f4efef);
-	background-color: transparent;
+	/* border: 1px solid var(--Palette-White, #f4efef); */
+	/* background-color: transparent; */
 	transition: background-color 0.3s, color 0.3s;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
+	/* padding-top: 0.5rem; */
+	/* padding-bottom: 0.5rem; */
 
 	/* margin: 0 auto; */
 	white-space: nowrap;
@@ -18,7 +19,8 @@
 .get-in-touch {
 	padding-left: 1rem;
 	padding-right: 1rem;
-	font-size: 1.25rem;
+	font-weight: 500;
+	/* font-size: 1.25rem; */
 }
 
 .main-btn-text {

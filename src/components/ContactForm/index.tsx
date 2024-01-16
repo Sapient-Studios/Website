@@ -9,19 +9,19 @@ export default function ContactForm() {
             <form className="contact-form-card">
                 <div className="contact-form-prop">
                     <label htmlFor="name">Name</label>
-                    <input type="text" id="name" placeholder="Type your name" />
+                    <input type="text" id="name" placeholder="Type your name" className="hoverable"/>
                 </div>
                 <div className="contact-form-prop">
                     <label htmlFor="email">Email</label>
-                    <input type="text" id="email" placeholder="Type your e-mail" />
+                    <input type="text" id="email" placeholder="Type your e-mail" className="hoverable"/>
                 </div>
                 <div className="contact-form-prop">
                     <label htmlFor="subject">Subject</label>
-                    <input type="text" id="subject" placeholder="Type the subject" />
+                    <input type="text" id="subject" placeholder="Type the subject" className="hoverable"/>
                 </div>
                 <div className="contact-form-prop">
                     <label htmlFor="message">How can we help you?</label>
-                    <textarea id="message" placeholder="Write something" rows={4} cols={40} />
+                    <textarea id="message" placeholder="Write something" rows={4} cols={40} className="hoverable"/>
                 </div>
                 <button type="submit" id="submit-button" className="hoverable">Submit</button>
             </form>

@@ -92,11 +92,7 @@ function HeroPage() {
 					Making your <span className="test" >business</span> <br />
 					<span className="test" >efficient</span> with AI
 				</h1>
-				{/* <h1 className="hero-title">
-					<span className="test">business</span>
-				</h1> */}
-
-				<ButtonHero href="#contact" speed={8} width="12rem" height="3rem" />
+				<ButtonHero href="#contact" speed={8} width={12} height={3} color1="#F4EFEF" color2='transparent'/>
 			</main>
 			<a href='#solutions' className='keep-scrolling-container hoverable' onClick={ScrollScript}>
 				<KeepScrolling/>

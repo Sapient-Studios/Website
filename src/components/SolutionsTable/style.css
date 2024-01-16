@@ -1,55 +1,97 @@
 .collapsible-sections {
-    width: 50vw;
+  width: 50vw;
+
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  gap: 0.5rem;
 }
 
 .section {
-    margin-bottom: 8px;
-    overflow: hidden;
-    transition: max-height 2s ease;
+  margin-bottom: 8px;
+  overflow: hidden;
+  transition: max-height 2s ease;
+  background-color: rgba(23, 23, 22, 0.3);
+  backdrop-filter: blur(4px);
 }
 
 .section.open {
-    max-height: 20rem;
+  max-height: 20rem;
 }
 
 .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 8px;
-    background-color: transparent;
+  padding: 1rem 0.5rem;
+  background-color: transparent;
 }
 
 .section-header h3 {
-    color: var(--white);
+  color: var(--white);
 }
 
 .section-content {
-    color: var(--white);
+  color: var(--white);
 
-    padding: 8px 16px;
-    font-size: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
 }
 
 .icon {
-    fill: var(--blue-main);
-    width: 24px;
-    height: 24px;
-    background-size: cover;
-    transition: transform 0.3s ease;
+  fill: var(--blue-main);
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  transition: transform 0.3s ease;
 }
 
 .icon.open {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
-.closing-line{
-    border-top: 1px solid #999999 !important;
-    border-radius: 10px;
+.closing-line {
+  border-top: 1px solid #999999 !important;
+  border-radius: 10px;
+  margin: 0;
+  margin-top: 1rem;
+  /* padding-top: 0.5rem; */
 }
 
-.closing-line.open{
-    border-top: 2px solid var(--blue-main) !important;
+.closing-line.open {
+  border-top: 2px solid var(--blue-main) !important;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .collapsible-sections {
+    width: 100% !important;
+  }
+
+  .section {
+    background-color: rgba(23, 23, 22, 0.1);
+
+    backdrop-filter: blur(1px);
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .collapsible-sections {
+
+    width: 80%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

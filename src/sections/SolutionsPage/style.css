@@ -1,62 +1,90 @@
 .solutions-section {
-	background-color: var(--bg-color);
-	height: fit-content;
-	font-size: calc(10px + 2vmin);
-	min-height: 100vh;
-	padding-bottom: 5rem;
+  background-color: var(--bg-color);
+  height: fit-content;
+  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  padding-bottom: 5rem;
 
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	/* gap: rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 .solutions-title {
-	padding: 0 6vw;
+  padding-left: 6vw;
 }
 
 .solutions-main {
-	width: 100%;
-	height: fit-content;
-	overflow-x: hidden;
+  width: 100%;
+  height: min-content;
+  overflow-x: hidden;
 
-	gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 
 .solutions-content-wrapper {
-	padding: 5vh 6vw;
-	padding-bottom: 0vh !important;
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	overflow: hidden;
+  position: relative;
+  padding: 2rem 6vw;
+  padding-bottom: 0vh !important;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
 }
 
 .globe {
-	position: relative;
-	z-index: 1 !important;
-	right: -10vw;
-	width: 50vw !important;
-	height: 50vw;
-	/* scale*/
-	transform: rotate(-25deg);
-	overflow: hidden;
+  opacity: 0.5;
+  position: absolute;
+  /* right: -10%; */
+  top: 0;
+  right: 0;
+  z-index: 0 !important;
+  /* scale*/
+  transform: rotate(-25deg);
+  overflow: hidden;
 }
 
-/* create the key media queries */
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-}
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
+  .solutions-section {
+    /* align-items: center; */
+    min-height: 100vh;
+
+    justify-content: center;
+  }
+
+  .solutions-title {
+    font-size: 1.7rem;
+  }
+
+  .solutions-content-wrapper {
+    justify-content: center;
+  }
+
+  .globe {
+    opacity: 0.3;
+    right: -10vw;
+
+    /* position: absolute; */
+    /* width: 50vw !important;
+		height: 70vh; */
+    /* scale*/
+    transform: rotate(-25deg);
+    overflow: hidden;
+  }
 }
+
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
 }
+
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 992px) {
 }
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 }
