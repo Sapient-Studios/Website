@@ -17,8 +17,8 @@ function ScrollableIndicator() {
 				ease: 'none',
 				scrollTrigger: {
 					trigger: containerRef.current,
-					end: "+=700 10%",
-					start: "+=000 90%",
+					end: "-=100 10%",
+					start: "+=400 90%",
 					scrub: true, // Enables smooth scrubbing
 					markers: true,
 					pinSpacing: false,

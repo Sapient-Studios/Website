@@ -4,7 +4,7 @@ import "./style.css";
 
 const velocity = 0.001; // Adjust this value to change rotation speed
 
-const Globe = ({size}) => {
+const Globe = ({ size }) => {
 	const zpos = 9;
 	const globeRef = useRef();
 
@@ -51,6 +51,7 @@ const Globe = ({size}) => {
 		// Set the camera position
 		camera.position.z = zpos;
 		scene.rotation.x = 8 * (Math.PI / 180);
+
 		// Create the globe with latitude and longitude lines
 		const radius = 5;
 		const latitudeLines = 48;

@@ -1,159 +1,166 @@
 .background-container {
-  position: absotule;
-  /* top: 0; */
-  /* left: 0; */
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+	position: absotule;
+	/* top: 0; */
+	/* left: 0; */
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
 }
 
 .contact-form-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-  background: var(--bg-color) url("../../assets/images/ContactBackground.svg")
-    no-repeat center center;
-  height: 100%;
+	background: var(--bg-color) url("../../assets/images/ContactBackground.svg") no-repeat center center;
+	height: 100%;
 
-  background-size: contain; /* or cover, depending on your preference */
-  overflow: hidden;
-margin: auto 0 ;
+	background-size: contain; /* or cover, depending on your preference */
+	overflow: hidden;
+	margin: auto 0;
 }
 
 .contact-form-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-  width: fit-content;
+	width: fit-content;
 
-  /* background-color: var(--bg-color); */
-  background-color: rgba(23, 23, 22, 0.05);
+	/* background-color: var(--bg-color); */
+	background-color: rgba(23, 23, 22, 0.05);
 
-  font-family: "Satoshi";
+	font-family: "Satoshi";
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
 
-  padding: 2vw;
+	padding: 2vw;
 
-  backdrop-filter: blur(5px);
-  border: 1px solid var(--blue-main);
-  border-radius: 10px;
+	backdrop-filter: blur(5px);
+	border: 1px solid var(--blue-main);
+	border-radius: 10px;
 }
 
 .contact-form-prop {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 
-  width: 50vw;
+	width: 50vw;
 
-  gap: 0.5rem;
+	gap: 0.5rem;
 
-  cursor: none;
-  /* pointer-events: none; */
+	cursor: none;
+	/* pointer-events: none; */
 }
 
 .contact-form-prop label {
-  font-weight: 500;
+	font-weight: 500;
 }
 
 .contact-form-prop input,
 .contact-form-prop textarea {
-  resize: none;
-  white-space: nowrap;
-  overflow: auto;
+	resize: none;
+	white-space: nowrap;
+	overflow: auto;
 
-  background-color: rgba(23, 23, 22, 0.2);
-  color: var(--white);
+	background-color: rgba(23, 23, 22, 0.2);
+	color: var(--white);
 
-  outline: none;
-  border-width: 0;
-  border-bottom: 1.5px solid var(--white);
+	outline: none;
+	border-width: 0;
+	border-bottom: 1.5px solid var(--white);
 
-  width: 100%;
+	width: 100%;
 
-  padding-bottom: 7px;
+	padding-bottom: 7px;
 }
 
 .contact-form-prop input:focus,
 .contact-form-prop textarea:focus {
-  border-bottom: 1.5px solid var(--blue-main);
+	border-bottom: 1.5px solid var(--blue-main);
 }
 
 .contact-form-prop input::placeholder,
 textarea::placeholder {
-  font-family: "Satoshi";
-  font-weight: 400;
-  font-style: italic;
-  color: var(--white);
+	font-family: "Satoshi";
+	font-weight: 400;
+	font-style: italic;
+	color: var(--white);
 }
 
 .contact-form-prop input:focus::placeholder,
 .contact-form-prop textarea:focus::placeholder {
-  color: var(--white-40);
+	color: var(--white-40);
 }
 
 .contact-form-prop textarea#message {
-  padding: 5px 10px;
-  padding-bottom: 0.5rem;
-  border-radius: 5px;
-  border: 1.5px solid var(--white);
+	padding: 5px 10px;
+	padding-bottom: 0.5rem;
+	border-radius: 5px;
+	border: 1.5px solid var(--white);
+}
+
+.inActive {
+	pointer-events: none;
+	cursor: none;
+	background-color: #169b9e !important;
 }
 
 #submit-button {
-  width: 100%;
-  height: 3rem;
+	width: 100%;
+	height: 3rem;
 
-  background-color: var(--blue-main);
-  color: var(--bg-color);
+	background-color: var(--blue-main);
+	transition: background-color 0.5s ease-in-out;
 
-  border: none;
-  outline: none;
-  border-radius: 5px;
+	color: var(--bg-color);
 
-  font-family: "Satoshi";
-  font-weight: 500;
-  font-size: 1rem;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+
+	font-family: "Satoshi";
+	font-weight: 500;
+	font-size: 1rem;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
-  .contact-form-container {
-    background-position: bottom;
-  }
+	.contact-form-container {
+		background-position: bottom;
+	}
 
-  .contact-form-card {
-    margin-top: -20%;
-  }
+	.contact-form-card {
+		margin-top: -20%;
+	}
 
-  .contact-form-prop {
-    width: 80vw !important;
-  }
+	.contact-form-prop {
+		width: 80vw !important;
+	}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
-  /* .contact-form-container {
+	/* .contact-form-container {
     background-position:  bottom;
   } */
 
-  .contact-form-card {
-    padding: 3vw;
-  }
+	.contact-form-card {
+		padding: 3vw;
+	}
 
-  .contact-form-prop {
-    width: 60vw;
-  }
+	.contact-form-prop {
+		width: 60vw;
+	}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
