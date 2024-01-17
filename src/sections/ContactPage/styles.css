@@ -1,5 +1,6 @@
 .contact-section {
-  height: 70vh;
+  height: 100vh;
+  max-height: 950px;
   position: relative;
   /* Add position relative to the container */
   background-color: var(--bg-color);
@@ -50,4 +51,14 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-header {
+    max-width: 1400px;
+  }
 }
