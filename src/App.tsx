@@ -27,7 +27,7 @@ function App() {
           <HeroPage />
           <Navbar onHeightChange={setNavbarHeight} />
           <SolutionsPage navbarHeight={navbarHeight} />
-          <ApproachPage />
+          <ApproachPage navbarHeight={navbarHeight} />
           <ContactPage navbarHeight={navbarHeight} />
           <Footer />
         </>

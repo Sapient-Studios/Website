@@ -95,7 +95,7 @@ function HeroPage() {
 				<ButtonHero href="#contact" speed={8} width={12} height={3} color1="#F4EFEF" color2='transparent'/>
 			</main>
 			<a href='#solutions' className='keep-scrolling-container hoverable' onClick={ScrollScript}>
-				<KeepScrolling/>
+				{/* <KeepScrolling/> */}
 			</a>
 		</section>
 	);

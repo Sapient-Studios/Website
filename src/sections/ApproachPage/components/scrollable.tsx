@@ -20,7 +20,7 @@ function ScrollableIndicator() {
 					end: "-=100 10%",
 					start: "+=400 90%",
 					scrub: true, // Enables smooth scrubbing
-					markers: true,
+					markers: false,
 					pinSpacing: false,
 					toggleActions: "play none none reverse",
 				}

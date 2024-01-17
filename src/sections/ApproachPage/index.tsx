@@ -22,45 +22,50 @@ const divs = [
 	]
 ]
 
-const ApproachCard = ({ title, content }: { title: string, content: string }) => {
+const ApproachCard = ({ title, content, image }: { title: string, content: string, image: string }) => {
 	const cardRef = useRef(null);
 
-	const handleScroll = () => {
-		if (cardRef.current) {
-			const rect = (cardRef.current as any).getBoundingClientRect();
-			const isInView = rect.top >= 0 && rect.bottom <= window.innerHeight;
+	// const handleScroll = () => {
+	// 	if (cardRef.current) {
+	// 		const rect = (cardRef.current as any).getBoundingClientRect();
+	// 		const isInView = rect.top >= 0 && rect.bottom <= window.innerHeight;
 
-			gsap.to(cardRef.current, {
-				opacity: isInView ? 1 : 0,
-				duration: 1, // Duration of the fade effect
-				delay: 0.5 // Delay before the fade effect kicks in
-			});
-		}
-	};
+	// 		gsap.to(cardRef.current, {
+	// 			opacity: isInView ? 1 : 0,
+	// 			duration: 1, // Duration of the fade effect
+	// 			// delay: 0.5 // Delay before the fade effect kicks in
+	// 		});
+	// 	}
+	// };
 
-	useEffect(() => {
-		window.addEventListener('scroll', handleScroll);
-		handleScroll(); // Initial check
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	}, []);
+	// useEffect(() => {
+	// 	window.addEventListener('scroll', handleScroll);
+	// 	handleScroll(); // Initial check
+	// 	return () => {
+	// 		window.removeEventListener('scroll', handleScroll);
+	// 	};
+	// }, []);
 
 	return (
 		<div ref={cardRef} className="approach-card-wrapper">
 			<div className="approach-card">
-				<h2>{title}</h2>
+				<h3>{title}</h3>
 				<p>{content}</p>
 			</div>
+			<img src={image} alt="" />
 		</div>
 	);
 };
 
 
-function ApproachPage() {
+function ApproachPage({ navbarHeight }: { navbarHeight: number }) {
+	const offset = navbarHeight + 16 * 2; // to offset the navbar + 2rem padding
+
 	return (
-		<section id="approach" className="approach-section">
-			<h1>How we run things</h1>
+		<section id="approach" className="approach-section" style={{ paddingTop: `${offset}px` }}>
+			<div className='approach-header'>
+				<h2>How we run things</h2>
+			</div>
 			<main className="approach-content-wrapper">
 				<ScrollableIndicator />
 				<div className="approach-cards">
@@ -69,6 +74,7 @@ function ApproachPage() {
 							key={div[0]}
 							title={div[0]}
 							content={div[1]}
+							image={div[2]}
 						/>
 					))}
 				</div>

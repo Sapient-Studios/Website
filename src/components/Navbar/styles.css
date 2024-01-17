@@ -1,11 +1,6 @@
 #navbar {
   padding: 1rem 6vw;
 
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 2rem;
-
   color: var(--white);
   background-color: rgba(23, 23, 22, 0.5);
   backdrop-filter: blur(10px);
@@ -15,6 +10,15 @@
   z-index: 100;
 
   overflow: hidden;
+}
+
+.navbar-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+
+  width: 100%;
 }
 
 .navbar-logo-wrapper {
@@ -103,4 +107,12 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  #navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar-container{
+    width: 1400px;
+  }
 }
