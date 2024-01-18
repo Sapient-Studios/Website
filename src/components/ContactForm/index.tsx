@@ -5,7 +5,6 @@ import emailjs from '@emailjs/browser';
 
 
 export default function ContactForm() {
-    const urlKey = "6LdmK1MpAAAAAHyfm5zF8QVp-7bM6uy1YbBvYCrW"
     const [correct, setCorrect] = React.useState(false)
 
     function onchange(value: string | null) {
@@ -14,7 +13,7 @@ export default function ContactForm() {
             setCorrect(true)
         }
     }
-    function sendEmail(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    function sendEmail() {
         console.log("send email")
         const name = (document.getElementById("name") as HTMLInputElement).value;
         const email = (document.getElementById("email") as HTMLInputElement).value;
@@ -40,6 +39,8 @@ export default function ContactForm() {
             }, (error) => {
                 console.log(error.text);
                 alert("Error sending email")
+            }).finally(() => {
+                setCorrect(false)
             });
     }
 
@@ -67,6 +68,7 @@ export default function ContactForm() {
                     theme="dark"
                     sitekey="6LdmK1MpAAAAAHyfm5zF8QVp-7bM6uy1YbBvYCrW"
                     onExpired={() => {
+                        setCorrect(false)
                         console.log("expired");
                     }}
                     onErrored={() => {
@@ -76,9 +78,9 @@ export default function ContactForm() {
                         onchange(val);
                     }}
                 />
-                <button type="submit" id="submit-button" disabled={!correct} className={`hoverable ${!correct ? "inActive" : ""}`} onClick={(e) => {
-                    sendEmail(e)
-                }}>Send</button>
+                <a type="submit" id="submit-button" className={`hoverable ${!correct ? "inActive" : ""}`} onClick={() => {
+                    sendEmail()
+                }}>Send</a>
             </form>
         </div>
     );

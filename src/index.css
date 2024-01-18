@@ -77,8 +77,6 @@
 	--blue-dark: #002bdc;
 
 	box-sizing: border-box;
-
-	
 }
 
 *::selection {
@@ -88,6 +86,14 @@
 
 html {
 	overflow-x: hidden;
+}
+
+input {
+	cursor: none;
+}
+
+textarea {
+	cursor: none;
 }
 
 body {

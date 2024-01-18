@@ -132,6 +132,23 @@ textarea::placeholder {
 	font-family: "Satoshi";
 	font-weight: 500;
 	font-size: 1rem;
+	z-index: 1000;
+	text-align: center;
+	vertical-align: middle;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: -moz-none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#submit-button:active {
+	background-color: #0e9598;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -140,7 +157,7 @@ textarea::placeholder {
 		background-position: bottom;
 		min-height: fit-content;
 	}
-	
+
 	.contact-form-card {
 		margin: 2rem 0;
 		/* margin-top: -20%; */
