@@ -9,7 +9,6 @@ function ScrollableIndicator() {
 
 	gsap.registerPlugin(ScrollTrigger);
 
-
 	useEffect(() => {
 		if (containerRef.current && ballRef.current) {
 			gsap.to(ballRef.current, {
@@ -22,7 +21,6 @@ function ScrollableIndicator() {
 					scrub: true, // Enables smooth scrubbing
 					markers: false,
 					pinSpacing: false,
-					toggleActions: "play none none reverse",
 				}
 			});
 		}

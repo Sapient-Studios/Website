@@ -3,14 +3,14 @@ import './style.css';
 import gsap from 'gsap';
 
 const CustomCursor = () => {
-	const [widthMatches, setWidthMatches] = useState(false);
+	const [widthMatches, setWidthMatches] = useState(window.matchMedia("(min-width: 990px)").matches);
 	const cursorRef = useRef(null);
 	const cursorPos = useRef({ x: 0, y: 0 });
 
 	useEffect(() => {
+		const body = document.body;
 		const bigBall = document.querySelector('.cursor__ball--big');
 		const smallBall = document.querySelector('.cursor__ball--small');
-		const body = document.body;
 		const cursor = document.querySelector('.cursor');
 
 		const togglePageCursor = (e) => {
@@ -51,7 +51,6 @@ const CustomCursor = () => {
 					duration: 0.1,
 				});
 			}
-
 		};
 
 		const onMouseHover = () => {
