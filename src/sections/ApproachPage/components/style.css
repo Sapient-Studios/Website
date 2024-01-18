@@ -14,8 +14,8 @@
 	top: 1.8%;
 	left: 50%; /* Adjust as needed to align with your SVG */
 	transform: translateX(-50%);
-	width: 3rem; /* Size of the ball */
-	height: 3rem;
+	width: 2rem; /* Size of the ball */
+	height: 2rem;
 	background-color: #1bf4f9;
 	border-radius: 50%;
 }
