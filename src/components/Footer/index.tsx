@@ -43,23 +43,23 @@ function Footer() {
 
                     </a>
                     <div className="center-links-container">
-                        <a className="hoverable"
+                        <a className="hoverable" target="_blank"
                             href="https://sapientstudios.notion.site/About-ee63d383adf84df2afa47304d56ffc75?pvs=4">
                             About</a>
-                        <a className="hoverable"
+                        <a className="hoverable" target="_blank"
                             href="https://sapientstudios.notion.site/Become-a-Partner-d80cc6f2f3e34e6ca15ffd936e586466?pvs=4">
                             Become a Partner</a>
-                        <a className="hoverable"
+                        <a className="hoverable" target="_blank"
                             href="https://sapientstudios.notion.site/FAQs-32499e84072f4892ba4a4d0dd3a53672?pvs=4">
                             FAQs</a>
                     </div>
                 </div>
                 <div className="footer-container" id="footer-3">
                     <div className="footer-socials">
-                        <a href="https://www.linkedin.com/company/sapientstudios">
+                        <a href="https://www.linkedin.com/company/sapientstudios" target="_blank">
                             <img src={LinkedIn} alt="" className="hoverable" />
                         </a>
-                        <a href="wip :)">
+                        <a href="https://twitter.com/Sapient_Studio" target="_blank">
                             <img src={X} alt="twitter" className="hoverable" />
                         </a>
                     </div>
