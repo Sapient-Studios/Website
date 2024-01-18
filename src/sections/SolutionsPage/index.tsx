@@ -33,7 +33,7 @@ function SolutionsPage({ navbarHeight }: { navbarHeight: number }) {
 						<Globe size={globeSize}/>
 					</div>
 				</div>
-				<div style={{ maskImage: `linear-gradient(to right, rgba(0, 0, 0, 0) 6vw, rgb(255, 255, 255) 20vw, rgb(255, 255, 255) 80vw, rgba(0, 0, 0, 0) 94vw)`, padding: `0 6vw` }}>
+				<div className="solutions-tools"style={{ maskImage: `linear-gradient(to right, rgba(0, 0, 0, 0) 6vw, rgb(255, 255, 255) 20vw, rgb(255, 255, 255) 80vw, rgba(0, 0, 0, 0) 94vw)`, padding: `0 6vw` }}>
 					{/* , filter: `grayscale(100%)` */}
 					<InfiniteLoop speed={15} direction="right">
 						<div className="contentBlock contentBlock--one">

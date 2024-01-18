@@ -5,6 +5,7 @@ import LinkedIn from "../../assets/images/LinkedIn.svg";
 import X from "../../assets/images/X.svg";
 import Footer1 from "../../assets/images/Footer1.png";
 import Footer2 from "../../assets/images/Footer2.png";
+import ScrollScript from "../ScrollScript";
 
 function Footer() {
     const [windowSize, setWindowSize] = useState({
@@ -37,7 +38,10 @@ function Footer() {
                     <span>© 2024 Sapient Studios. {(windowSize.width >= 768) && <br />} All rights reserved.</span>
                 </div>
                 <div className="footer-container" id="footer-2">
-                    <img src={FooterLogo} alt="" />
+                    <a href="#landing" onClick={ScrollScript} className="hoverable">
+                        <img src={FooterLogo} alt="" />
+
+                    </a>
                     <div className="center-links-container">
                         <a className="hoverable"
                             href="https://sapientstudios.notion.site/About-ee63d383adf84df2afa47304d56ffc75?pvs=4">
@@ -51,12 +55,15 @@ function Footer() {
                     </div>
                 </div>
                 <div className="footer-container" id="footer-3">
-                    <a href="https://www.linkedin.com/company/sapientstudios">
-                        <img src={LinkedIn} alt="" className="hoverable" />
-                    </a>
-                    <a href="wip :)">
-                        <img src={X} alt="" className="hoverable" />
-                    </a>
+                    <div className="footer-socials">
+                        <a href="https://www.linkedin.com/company/sapientstudios">
+                            <img src={LinkedIn} alt="" className="hoverable" />
+                        </a>
+                        <a href="wip :)">
+                            <img src={X} alt="twitter" className="hoverable" />
+                        </a>
+                    </div>
+                    <span id="email">general@sapientstudios.co</span>
                 </div>
             </div>
         </footer>
