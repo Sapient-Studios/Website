@@ -82,21 +82,22 @@ function HeroPage() {
 
 	return (
 
-		<section id="landing" className='hero-section' onMouseMove={handleMouseMove} style={{ backgroundImage: `url(${HeroCurves})` }}>
-			{/* <HeroCurves style=""/> */}
-			<div className="hero-header">
-				<img src={HeroLogo} />
+		<section id="landing" className='hero-section' onMouseMove={handleMouseMove}>
+			<div className='hero-wrapper'  style={{ backgroundImage: `url(${HeroCurves})` }}>
+				<div className="hero-header">
+					<img src={HeroLogo} />
+				</div>
+				<main className="hero-main">
+					<h1 className="hero-title">
+						Making your <span className="test" >business</span> <br />
+						<span className="test" >efficient</span> with AI
+					</h1>
+					<ButtonHero href="#contact" speed={8} width={12} height={3} color1="#F4EFEF" color2='transparent' />
+				</main>
+				<a href='#solutions' className='keep-scrolling-container hoverable' onClick={ScrollScript}>
+					{/* <KeepScrolling/> */}
+				</a>
 			</div>
-			<main className="hero-main">
-				<h1 className="hero-title">
-					Making your <span className="test" >business</span> <br />
-					<span className="test" >efficient</span> with AI
-				</h1>
-				<ButtonHero href="#contact" speed={8} width={12} height={3} color1="#F4EFEF" color2='transparent'/>
-			</main>
-			<a href='#solutions' className='keep-scrolling-container hoverable' onClick={ScrollScript}>
-				{/* <KeepScrolling/> */}
-			</a>
 		</section>
 	);
 }

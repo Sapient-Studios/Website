@@ -25,13 +25,8 @@ function Navbar({ onHeightChange }: { onHeightChange: (height: number) => void }
 					<a href='#approach' className='hoverable' onClick={ScrollScript}>Approach</a>
 					{/* <a></a> */}
 				</div>
-				<div className='contact-wrapper desktop' style={{ height: "100%", position: "relative" }}>
+				<div className='contact-wrapper' style={{ height: "100%", position: "relative" }}>
 					<ButtonHero href="#contact" speed={8} width={10} height={2.6} color1="#171716" color2='#1bf4f9' />
-				</div>
-				<div className="hamburger">
-					<div className="burger burgerl" />
-					<div className="burger burger2" />
-					<div className="burger burger3" />
 				</div>
 			</div>
 		</nav>

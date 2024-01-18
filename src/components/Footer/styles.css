@@ -98,7 +98,12 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
-  .footer {
+
+  .footer{
+    height: fit-content;
+  }
+
+  .footer-wrapper {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr min-content min-content;
@@ -137,6 +142,11 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .footer-wrapper{
-    width: 1400px;
+    width: 1200px;
+    
+  }
+
+  .footer-container{
+    min-width: fit-content;
   }
 }
