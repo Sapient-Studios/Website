@@ -16,7 +16,7 @@ function SolutionsPage({ navbarHeight }: { navbarHeight: number }) {
 	const offset = -navbarHeight - 1;
 
 	// to offset the navbar + 2rem padding
-	const padding = navbarHeight + 1 + 16 * 2; // line bug + 3rem 
+	const padding = navbarHeight + 1 + 16 * 3; // line bug + 3rem 
 
 	const globeSize = "50vh";
 

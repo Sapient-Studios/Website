@@ -94,9 +94,13 @@
     align-items: center;
   }
 
-  .solutions-title, .solutions-main{
+  .solutions-title {
+    width: 100%;
+  }
+
+  .solutions-main {
     align-content: flex-start;
-    width: 1400px;
+    max-width: 1200px;
   }
 
   /* .solutions-section {
