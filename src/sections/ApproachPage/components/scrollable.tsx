@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { gsap, ScrollTrigger } from 'gsap/all';
 import svgimage from '../../../assets/images/cenafixescroll.svg';
 import './style.css';
 
 function ScrollableIndicator() {
+	const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 	const ballRef = useRef(null);
 	const containerRef = useRef(null);
 
@@ -11,17 +12,43 @@ function ScrollableIndicator() {
 
 	useEffect(() => {
 		if (containerRef.current && ballRef.current) {
-			gsap.to(ballRef.current, {
-				top: '91.7%', // Animates the ball to the bottom of the container
-				ease: 'none',
-				scrollTrigger: {
-					trigger: containerRef.current,
-					end: "-=100 10%",
-					start: "+=400 90%",
-					scrub: true, // Enables smooth scrubbing
-					markers: false,
-					pinSpacing: false,
-				}
+			if (!isMobile) {
+				gsap.to(ballRef.current, {
+					top: '91.7%', // Animates the ball to the bottom of the container
+					ease: 'none',
+					scrollTrigger: {
+						trigger: containerRef.current,
+						end: "-=100 10%",
+						start: "+=400 90%",
+						scrub: true, // Enables smooth scrubbing
+						markers: true,
+						pinSpacing: false,
+					}
+				});
+			} else {
+				gsap.to(ballRef.current, {
+					top: '91.7%', // Animates the ball to the bottom of the container
+					ease: 'none',
+					scrollTrigger: {
+						trigger: containerRef.current,
+						end: "-=200 10%",
+						start: "+=200 90%",
+						scrub: true, // Enables smooth scrubbing
+						markers: true,
+						pinSpacing: false,
+					}
+				});
+			}
+		}
+
+		// get event listener for scroll
+		window.addEventListener('ressize', () => {
+			setIsMobile(window.innerWidth < 768);
+		});
+
+		return () => {
+			window.removeEventListener('ressize', () => {
+				setIsMobile(window.innerWidth < 768);
 			});
 		}
 	}, [ballRef, containerRef]); // Add dependencies here
