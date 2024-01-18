@@ -11,7 +11,7 @@
 
 .scroll-ball {
 	position: absolute;
-	top: 1.8%;
+	/* top: 1.8%; */
 	left: 50%; /* Adjust as needed to align with your SVG */
 	transform: translateX(-50%);
 	width: 2rem; /* Size of the ball */

@@ -21,20 +21,20 @@ function ScrollableIndicator() {
 						end: "-=100 10%",
 						start: "+=400 90%",
 						scrub: true, // Enables smooth scrubbing
-						markers: true,
+						markers: false,
 						pinSpacing: false,
 					}
 				});
 			} else {
 				gsap.to(ballRef.current, {
-					top: '91.7%', // Animates the ball to the bottom of the container
+					top: '88%', // Animates the ball to the bottom of the container
 					ease: 'none',
 					scrollTrigger: {
 						trigger: containerRef.current,
-						end: "-=200 10%",
-						start: "+=200 90%",
+						end: "-=200 5%",
+						start: "+=200 70%",
 						scrub: true, // Enables smooth scrubbing
-						markers: true,
+						markers: false,
 						pinSpacing: false,
 					}
 				});
@@ -57,7 +57,7 @@ function ScrollableIndicator() {
 	return (
 		<div className="scrollable-indicator" ref={containerRef}>
 			<img src={svgimage} alt="scrollable indicator" className="svg-image" style={{ width: "100%", height: "100%" }} />
-			<div ref={ballRef} className="scroll-ball"></div>
+			<div ref={ballRef} className="scroll-ball" style={{top: `${isMobile? "8%" : "1.8%"}`}}></div>
 		</div>
 	);
 }
